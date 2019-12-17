@@ -1,0 +1,319 @@
+{
+  "@context" : {
+    "fechaFinalizacion" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaFinalizacion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "prorroga" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga",
+      "@type" : "@id"
+    },
+    "abstract" : {
+      "@id" : "http://purl.org/dc/terms/abstract"
+    },
+    "scopeNote" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#scopeNote"
+    },
+    "role" : {
+      "@id" : "http://www.w3.org/ns/org#role",
+      "@type" : "@id"
+    },
+    "firmanteEntidad" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteEntidad",
+      "@type" : "@id"
+    },
+    "fechaResolucionFinalizacion" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaResolucionFinalizacion"
+    },
+    "range" : {
+      "@id" : "https://www.w3.org/2000/01/rdf-schema#range"
+    },
+    "term_status" : {
+      "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "Convenio" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio"
+    },
+    "esProrrogaDe" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe",
+      "@type" : "@id"
+    },
+    "example" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#example"
+    },
+    "fechaSuscripcion" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaSuscripcion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "url" : {
+      "@id" : "http://schema.org/url",
+      "@type" : "@id"
+    },
+    "Membership" : {
+      "@id" : "http://www.w3.org/ns/org#Membership"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "@id"
+    },
+    "bibliographicCitation" : {
+      "@id" : "http://purl.org/dc/terms/bibliographicCitation"
+    },
+    "entidadSuscriptora" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#entidadSuscriptora",
+      "@type" : "@id"
+    },
+    "Organization" : {
+      "@id" : "http://www.w3.org/ns/org#Organization"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued"
+    },
+    "Thing" : {
+      "@id" : "http://schema.org/Thing"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "adjudicatario" : {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/subvencion#adjudicatario",
+      "@type" : "@id"
+    },
+    "District" : {
+      "@id" : "http://dbpedia.org/ontology/District"
+    },
+    "hasVersion" : {
+      "@id" : "http://purl.org/dc/terms/hasVersion"
+    },
+    "Subvencion" : {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/subvencion#Subvencion"
+    },
+    "label" : {
+      "@id" : "rdfs:label",
+      "@type" : "@id"
+    },
+    "gestionadoPor" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#gestionadoPor",
+      "@type" : "@id"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "qualifiedCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#qualifiedCardinality"
+    },
+    "Municipio" : {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio"
+    },
+    "subClassOf" : {
+      "@id" : "https://www.w3.org/2000/01/rdf-schema#subClassOf"
+    },
+    "maxQualifiedCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#maxQualifiedCardinality"
+    },
+    "obligacionEconomicaEntidad" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligacionEconomicaEntidad",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "note" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#note"
+    },
+    "obligadoPrestacionesAyuntamiento" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesAyuntamiento",
+      "@type" : "@id"
+    },
+    "Date" : {
+      "@id" : "http://schema.org/Date"
+    },
+    "obligacionEconomicaAyuntamiento" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligacionEconomicaAyuntamiento",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "notation" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#notation"
+    },
+    "GovernmentalAdministrativeRegion" : {
+      "@id" : "http://dbpedia.org/ontology/GovernmentalAdministrativeRegion"
+    },
+    "Agent" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Agent"
+    },
+    "modalidad" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "convenioSuscrito" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito",
+      "@type" : "@id"
+    },
+    "Role" : {
+      "@id" : "http://www.w3.org/ns/org#Role"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "suscritoPor" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#suscritoPor",
+      "@type" : "@id"
+    },
+    "CreativeWork" : {
+      "@id" : "http://schema.org/CreativeWork"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/elements/1.1/rights"
+    },
+    "Distrito" : {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito"
+    },
+    "identifier" : {
+      "@id" : "http://www.w3.org/ns/org#identifier"
+    },
+    "SuscripcionDeConvenioPorEntidad" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#preferredNamespacePrefix"
+    },
+    "domain" : {
+      "@id" : "https://www.w3.org/2000/01/rdf-schema#domain"
+    },
+    "fechaAdjudicacion" : {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/subvencion#fechaAdjudicacion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "obligadoPrestacionesEntidad" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesEntidad",
+      "@type" : "@id"
+    },
+    "isDefinedBy" : {
+      "@id" : "https://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "definition" : {
+      "@id" : "http://www.w3.org/2008/05/skos#definition"
+    },
+    "firmanteAyuntamiento" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteAyuntamiento",
+      "@type" : "@id"
+    },
+    "ambitoCompetencias" : {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/organizacion#ambitoCompetencias",
+      "@type" : "@id"
+    },
+    "ConceptScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    },
+    "subPropertyOf" : {
+      "@id" : "https://www.w3.org/2000/01/rdf-schema#subPropertyOf"
+    },
+    "tableOfContents" : {
+      "@id" : "http://purl.org/dc/terms/tableOfContents"
+    },
+    "fechaRegistro" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaRegistro",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "DigitalDocument" : {
+      "@id" : "http://schema.org/DigitalDocument"
+    },
+    "Municipality" : {
+      "@id" : "http://dbpedia.org/ontology/Municipality"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "accessRights" : {
+      "@id" : "http://purl.org/dc/terms/accessRights"
+    },
+    "date" : {
+      "@id" : "http://purl.org/dc/elements/1.1/date"
+    },
+    "seeAlso" : {
+      "@id" : "https://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "documento" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#documento",
+      "@type" : "@id"
+    },
+    "instrumenta" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#instrumenta",
+      "@type" : "@id"
+    },
+    "fechaInicio" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaInicio",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "comment" : {
+      "@id" : "https://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/elements/1.1/contributor"
+    },
+    "materia" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#materia",
+      "@type" : "@id"
+    },
+    "importe" : {
+      "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/subvencion#importe",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "numero" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#numero",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "alternative" : {
+      "@id" : "http://purl.org/dc/terms/alternative"
+    },
+    "hasFormat" : {
+      "@id" : "http://purl.org/dc/terms/hasFormat"
+    },
+    "organization" : {
+      "@id" : "http://www.w3.org/ns/org#organization",
+      "@type" : "@id"
+    },
+    "inScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#preferredNamespaceUri"
+    },
+    "relation" : {
+      "@id" : "http://purl.org/dc/elements/1.1/relation"
+    },
+    "tipoConvenio" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio",
+      "@type" : "@id"
+    },
+    "DateTime" : {
+      "@id" : "http://schema.org/DateTime"
+    },
+    "classification" : {
+      "@id" : "http://www.w3.org/ns/org#classification",
+      "@type" : "@id"
+    },
+    "objeto" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#objeto",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    }
+  }
+}
