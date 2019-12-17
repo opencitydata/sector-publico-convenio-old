@@ -39,7 +39,7 @@
         <preferredNamespaceUri>http://vocab.ciudadesabiertas.es/def/sector-publico/convenios#</preferredNamespaceUri>
         <rdfs:comment xml:lang="es">Esta versión ha sido generada dentro del contexto del proyecto &quot;Plataforma de gobierno abierto, colaborativa e interoperable&quot; en el que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y A Coruña.   
 En esta versión se han definido clases y propiedades de acuerdo a los requisitos y glosario de conceptos propuestos en las reuniones del 18/07/2019 y del 26/09/2019.</rdfs:comment>
-        <owl:versionInfo>Esta es la versión inicial de la ontología de Convenios que ha sido implementada en el contexto del proyecto &quot;Plataforma de gobierno abierto, colaborativa e interoperable&quot; en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y La Coruña.</owl:versionInfo>
+        <owl:versionInfo>Esta es la versión inicial de la ontología de Convenios que ha sido implementada en el contexto del proyecto &quot;Plataforma de gobierno abierto, colaborativa e interoperable&quot; en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y A Coruña.</owl:versionInfo>
     </owl:Ontology>
     
 

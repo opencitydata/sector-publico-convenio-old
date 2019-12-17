@@ -737,7 +737,7 @@
     "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio/1.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "Esta es la versión inicial de la ontología de Convenios que ha sido implementada en el contexto del proyecto \"Plataforma de gobierno abierto, colaborativa e interoperable\" en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y La Coruña."
+    "@value" : "Esta es la versión inicial de la ontología de Convenios que ha sido implementada en el contexto del proyecto \"Plataforma de gobierno abierto, colaborativa e interoperable\" en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y A Coruña."
   } ]
 }, {
   "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio",
