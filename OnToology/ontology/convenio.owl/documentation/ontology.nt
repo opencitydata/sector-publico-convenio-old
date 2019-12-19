@@ -197,6 +197,15 @@
 # http://schema.org/dateCreated
 <http://schema.org/dateCreated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://schema.org/dateCreated> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Date> .
+<http://schema.org/dateCreated> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://schema.org/Date> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://schema.org/DateTime> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://schema.org/dateCreated> <http://www.w3.org/2000/01/rdf-schema#comment> "The date on which the CreativeWork was created or the item was added to a DataFeed."@en .
 <http://schema.org/dateCreated> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/dateCreated> .
 <http://schema.org/dateCreated> <http://www.w3.org/2000/01/rdf-schema#label> "dateCreated"@en .
@@ -205,9 +214,21 @@
 <http://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <rdfs:label> .
 <http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Thing> .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://schema.org/Thing> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 # http://schema.org/url
 <http://schema.org/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid6 <http://www.w3.org/2002/07/owl#unionOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://schema.org/Thing> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Thing> .
 <http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#comment> "URL of the item."@en .
 <http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/url> .
@@ -218,6 +239,11 @@
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito> <http://www.w3.org/2002/07/owl#inverseOf> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#suscritoPor> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito> <http://www.w3.org/2000/01/rdf-schema#comment> "Agreement subscribed by an entity."@en .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito> <http://www.w3.org/2000/01/rdf-schema#comment> "Convenio suscrito por una entidad."@es .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito> <http://www.w3.org/2000/01/rdf-schema#label> "convenio suscrito"@es .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito> <http://www.w3.org/2000/01/rdf-schema#label> "subscribed agreement"@en .
 # 
 # http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#documento
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#documento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -236,7 +262,7 @@
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#entidadSuscriptora> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#Organization> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#entidadSuscriptora> <http://www.w3.org/2000/01/rdf-schema#comment> "Organización que subscribe el convenio."@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#entidadSuscriptora> <http://www.w3.org/2000/01/rdf-schema#comment> "Organization that subscribes the agreement."@en .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#entidadSuscriptora> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#entidadSuscriptora> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#entidadSuscriptora> <http://www.w3.org/2000/01/rdf-schema#label> "entidad suscriptora"@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#entidadSuscriptora> <http://www.w3.org/2000/01/rdf-schema#label> "subscribing entity"@en .
 # 
@@ -245,6 +271,11 @@
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe> <http://www.w3.org/2002/07/owl#inverseOf> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe> <http://www.w3.org/2000/01/rdf-schema#comment> "Agreement of which is an extension"@en .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe> <http://www.w3.org/2000/01/rdf-schema#comment> "Convenio del cual es prórroga"@es .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe> <http://www.w3.org/2000/01/rdf-schema#label> "es prórroga de"@es .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe> <http://www.w3.org/2000/01/rdf-schema#label> "is extension of"@en .
 # 
 # http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteAyuntamiento
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteAyuntamiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -252,7 +283,7 @@
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#Membership> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Municipal government area and position of the city council signer."@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Área de gobierno municipal y cargo del firmante por el ayuntamiento"@es .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#label> "firmante ayuntamiento"@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#label> "signer city council"@en .
 # 
@@ -262,7 +293,7 @@
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteEntidad> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#Membership> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteEntidad> <http://www.w3.org/2000/01/rdf-schema#comment> "Area of the organization and position of the signer of the agreement."@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteEntidad> <http://www.w3.org/2000/01/rdf-schema#comment> "Área de la organización y cargo del firmante del convenio."@es .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteEntidad> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteEntidad> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteEntidad> <http://www.w3.org/2000/01/rdf-schema#label> "firmante entidad"@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteEntidad> <http://www.w3.org/2000/01/rdf-schema#label> "signer entity"@en .
 # 
@@ -273,7 +304,7 @@
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#gestionadoPor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#Organization> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#gestionadoPor> <http://www.w3.org/2000/01/rdf-schema#comment> "Area of municipal government or district responsible for managing the agreement."@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#gestionadoPor> <http://www.w3.org/2000/01/rdf-schema#comment> "Área de gobierno municipal o distrito encargada de gestionar el convenio."@es .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#gestionadoPor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#gestionadoPor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#gestionadoPor> <http://www.w3.org/2000/01/rdf-schema#label> "gestiondado por"@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#gestionadoPor> <http://www.w3.org/2000/01/rdf-schema#label> "managed by"@en .
 # 
@@ -285,7 +316,7 @@
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#instrumenta> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/subvencion#Subvencion> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#instrumenta> <http://www.w3.org/2000/01/rdf-schema#comment> "Se pueden celebrar convenios para el otorgamiento directo de subvenciones, o para la participación de entidades que colaborarán con la gestión de la subvención"@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#instrumenta> <http://www.w3.org/2000/01/rdf-schema#comment> "Agreements can be held for the direct granting of subsidies, or for the participation of entities that will collaborate with the management of the subsidy." .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#instrumenta> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#instrumenta> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#instrumenta> <http://www.w3.org/2000/01/rdf-schema#label> "instrumenta"@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#instrumenta> <http://www.w3.org/2000/01/rdf-schema#label> "instruments"@en .
 # 
@@ -293,28 +324,42 @@
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#materia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#materia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#materia> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#materia> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#materia> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid1 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#materia> <http://www.w3.org/2000/01/rdf-schema#range> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid10 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#materia> <http://www.w3.org/2000/01/rdf-schema#comment> "Main subject of the agreement. Corresponds to a public policy of the city council."@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#materia> <http://www.w3.org/2000/01/rdf-schema#comment> "Materia principal de ámbito del convenio. Corresponde a una política pública del ayuntamiento."@es .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#materia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#materia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#materia> <http://www.w3.org/2000/01/rdf-schema#label> "materia"@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#materia> <http://www.w3.org/2000/01/rdf-schema#label> "subject"@en .
 # 
 # http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad> <http://www.w3.org/2000/01/rdf-schema#range> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid2 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/modalidad> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad> <http://www.w3.org/2000/01/rdf-schema#range> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid14 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/modalidad> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad> <http://www.w3.org/2000/01/rdf-schema#comment> "La modalidad determina el objeto, procedimientos, régimen jurídico y los recursos aportados por ambas partes."@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad> <http://www.w3.org/2000/01/rdf-schema#comment> "The modality determines the objective, procedures, legal regime and the resources contributed by both parties."@en .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad> <http://www.w3.org/2000/01/rdf-schema#label> "modalidad"@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad> <http://www.w3.org/2000/01/rdf-schema#label> "modality"@en .
 # 
@@ -325,6 +370,7 @@ _:genid2 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/da
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#Organization> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Government area that is obliged to provide the agreed capabilities."@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Área de gobierno obligado a realizar las prestaciones convenidas."@es .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#label> "obligado prestaciones ayuntamiento"@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#label> "obliged capabilities city council"@en .
 # 
@@ -335,7 +381,7 @@ _:genid2 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/da
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesEntidad> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#Organization> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesEntidad> <http://www.w3.org/2000/01/rdf-schema#comment> "Organizational areas of the entities that are obliged to provide the agreed capabilities."@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesEntidad> <http://www.w3.org/2000/01/rdf-schema#comment> "Áreas organizativas de las entidades que son los obligados a realizar las prestaciones convenidas."@es .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesEntidad> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesEntidad> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesEntidad> <http://www.w3.org/2000/01/rdf-schema#label> "obligado prestaciones entidad"@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesEntidad> <http://www.w3.org/2000/01/rdf-schema#label> "obliged capabilities entity"@en .
 # 
@@ -345,7 +391,7 @@ _:genid2 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/da
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga> <http://www.w3.org/2000/01/rdf-schema#comment> "Extension of an existing agreement."@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga> <http://www.w3.org/2000/01/rdf-schema#comment> "Prórroga a un convenio existente."@es .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga> <http://www.w3.org/2000/01/rdf-schema#label> "extension"@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga> <http://www.w3.org/2000/01/rdf-schema#label> "prórroga"@es .
 # 
@@ -355,7 +401,7 @@ _:genid2 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/da
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#suscritoPor> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#suscritoPor> <http://www.w3.org/2000/01/rdf-schema#comment> "Entidad que suscribe el convenio."@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#suscritoPor> <http://www.w3.org/2000/01/rdf-schema#comment> "Entity that suscribes the agreement."@en .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#suscritoPor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#suscritoPor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#suscritoPor> <http://www.w3.org/2000/01/rdf-schema#label> "subscribed by"@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#suscritoPor> <http://www.w3.org/2000/01/rdf-schema#label> "suscrito por"@es .
 # 
@@ -363,14 +409,21 @@ _:genid2 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/da
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio> <http://www.w3.org/2000/01/rdf-schema#range> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/tipo-convenio> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio> <http://www.w3.org/2000/01/rdf-schema#range> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid18 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/tipo-convenio> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio> <http://www.w3.org/2000/01/rdf-schema#comment> "Tipo de convenio según las entidades que las suscriben."@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of agreement according to the entities that sign them."@en .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios"@en .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio"@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio> <http://www.w3.org/2000/01/rdf-schema#label> "tipo de convenio"@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio> <http://www.w3.org/2000/01/rdf-schema#label> "type of agreement"@en .
 # 
@@ -394,6 +447,7 @@ _:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/da
 # 
 # http://www.w3.org/2004/02/skos/core#inScheme
 <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
 <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2000/01/rdf-schema#label> "is in scheme"@en .
@@ -403,10 +457,12 @@ _:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/da
 # http://www.w3.org/ns/org#classification
 <http://www.w3.org/ns/org#classification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/ns/org#classification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#Organization> .
+<http://www.w3.org/ns/org#classification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://www.w3.org/ns/org#classification> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica una classificazione per questa Organization all'interno di un qualche schema di classificazione. Alcuni vocabolari potrebbero voler specializzare questa proprietà per avere un codominio corrispondente a uno specifico `skos:ConceptScheme`. Si noti che la presenza di questa proprietà è ancora in fase di discussione e potrebbe  essere revisionata o rimossa."@it .
 <http://www.w3.org/ns/org#classification> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a classification for this Organization within some classification scheme. Extension vocabularies may wish to specialize this property to have a range corresponding to a specific `skos:ConceptScheme`. This property is under discussion and may be revised or removed - in many cases organizations are best categorized by defining a sub-class hierarchy in an extension vocabulary."@en .
 <http://www.w3.org/ns/org#classification> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique une classification pour cette Organisation dans le cadre d'un schéma de classification. Il est possible de spécialiser cette propriété en utilisant un vocabulaire spécialisé pour que le champ corresponde à un concept spécifique `skos:ConceptScheme`. Cette propriété est en discussion est pourrait être révisée ou supprimée - dans de nombreux cas, les organisations sont mieux catégorisées par une hiérarchie de sous-classe dans un vocabulaire externe."@fr .
 <http://www.w3.org/ns/org#classification> <http://www.w3.org/2000/01/rdf-schema#comment> "Ordenación jerárquica que se hace de una organización dentro de un esquema de clasificación. Es posible que algunos vocabularios especifiquen esta propiedad de forma que el rango se corresponda con un `skos:ConceptScheme` específico. La conveniencia de incluir esta propiedad se está debatiendo y puede que se revise o elimine (en muchos casos las organizaciones se clasifican mejor si se define una jerarquía de subclases en un vocabulario aparte)"@es .
+<http://www.w3.org/ns/org#classification> <http://www.w3.org/2000/01/rdf-schema#comment> "ある分類表内のこの組織に対する分類を示します。\nアプリケーションがorg:Organizationのサブクラスを組織的なカテゴリーを表わす手段として定義することも許容されることに注意してください。"@ja .
 <http://www.w3.org/ns/org#classification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
 <http://www.w3.org/ns/org#classification> <http://www.w3.org/2000/01/rdf-schema#label> "classification"@en .
 <http://www.w3.org/ns/org#classification> <http://www.w3.org/2000/01/rdf-schema#label> "classification"@fr .
@@ -461,7 +517,7 @@ _:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/da
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaFinalizacion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaFinalizacion> <http://www.w3.org/2000/01/rdf-schema#comment> "End date of the agreement"@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaFinalizacion> <http://www.w3.org/2000/01/rdf-schema#comment> "Fecha de finalización del convenio."@es .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaFinalizacion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaFinalizacion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaFinalizacion> <http://www.w3.org/2000/01/rdf-schema#label> "end date"@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaFinalizacion> <http://www.w3.org/2000/01/rdf-schema#label> "fecha de finalización"@es .
 # 
@@ -472,7 +528,7 @@ _:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/da
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaInicio> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaInicio> <http://www.w3.org/2000/01/rdf-schema#comment> "Date the agreement begins."@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaInicio> <http://www.w3.org/2000/01/rdf-schema#comment> "Fecha de inicio del convenio."@es .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaInicio> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaInicio> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaInicio> <http://www.w3.org/2000/01/rdf-schema#label> "fecha de inicio"@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaInicio> <http://www.w3.org/2000/01/rdf-schema#label> "start date"@en .
 # 
@@ -489,9 +545,11 @@ _:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/da
 # 
 # http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaResolucionFinalizacion
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaResolucionFinalizacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaResolucionFinalizacion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaResolucionFinalizacion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaResolucionFinalizacion> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of the resolution by which the agreement is finalized."@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaResolucionFinalizacion> <http://www.w3.org/2000/01/rdf-schema#comment> "Fecha de la resolución por la cual se finaliza el convenio."@es .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaResolucionFinalizacion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios"@en .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaResolucionFinalizacion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio"@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaResolucionFinalizacion> <http://www.w3.org/2000/01/rdf-schema#label> "end agreement resolution date"@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaResolucionFinalizacion> <http://www.w3.org/2000/01/rdf-schema#label> "fecha de resolución de finalización"@es .
 # 
@@ -502,7 +560,7 @@ _:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/da
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaSuscripcion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaSuscripcion> <http://www.w3.org/2000/01/rdf-schema#comment> "Date on which the agreement is signed."@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaSuscripcion> <http://www.w3.org/2000/01/rdf-schema#comment> "Fecha en que se suscribe (firma) el convenio."@es .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaSuscripcion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaSuscripcion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaSuscripcion> <http://www.w3.org/2000/01/rdf-schema#label> "fecha de suscripción"@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaSuscripcion> <http://www.w3.org/2000/01/rdf-schema#label> "subscription date"@en .
 # 
@@ -513,7 +571,7 @@ _:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/da
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#numero> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#numero> <http://www.w3.org/2000/01/rdf-schema#comment> "Agreement's identification number"@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#numero> <http://www.w3.org/2000/01/rdf-schema#comment> "Número que identifica al convenio."@es .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#numero> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#numero> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#numero> <http://www.w3.org/2000/01/rdf-schema#label> "number"@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#numero> <http://www.w3.org/2000/01/rdf-schema#label> "número"@es .
 # 
@@ -525,7 +583,7 @@ _:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/da
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#objeto> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#objeto> <http://www.w3.org/2000/01/rdf-schema#comment> "Objective of the agreement"@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#objeto> <http://www.w3.org/2000/01/rdf-schema#comment> "Objetivo del convenio"@es .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#objeto> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#objeto> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#objeto> <http://www.w3.org/2000/01/rdf-schema#label> "objective"@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#objeto> <http://www.w3.org/2000/01/rdf-schema#label> "objeto"@es .
 # 
@@ -537,7 +595,7 @@ _:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/da
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligacionEconomicaAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligacionEconomicaAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Amount of economic obligations by the City Council."@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligacionEconomicaAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Cuantía de obligaciones económicas por el Ayuntamiento."@es .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligacionEconomicaAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligacionEconomicaAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligacionEconomicaAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#label> "economic obligation city council."@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligacionEconomicaAyuntamiento> <http://www.w3.org/2000/01/rdf-schema#label> "obligación económica ayuntamiento"@es .
 # 
@@ -548,7 +606,7 @@ _:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/da
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligacionEconomicaEntidad> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligacionEconomicaEntidad> <http://www.w3.org/2000/01/rdf-schema#comment> "Amount of economic obligations by entities."@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligacionEconomicaEntidad> <http://www.w3.org/2000/01/rdf-schema#comment> "Cuantía de obligaciones económicas por parte de las entidades"@es .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligacionEconomicaEntidad> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligacionEconomicaEntidad> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligacionEconomicaEntidad> <http://www.w3.org/2000/01/rdf-schema#label> "economic obligation entity"@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligacionEconomicaEntidad> <http://www.w3.org/2000/01/rdf-schema#label> "obligación económica entidad"@es .
 # 
@@ -574,6 +632,10 @@ _:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/da
 # 
 # http://www.w3.org/2004/02/skos/core#notation
 <http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2000/01/rdf-schema#label> "notation"@en .
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2004/02/skos/core#definition> "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme."@en .
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:notation is used with a typed literal in the object position of the triple."@en .
 # 
 # http://www.w3.org/ns/org#identifier
 <http://www.w3.org/ns/org#identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -645,197 +707,189 @@ _:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://vocab.linkeddata.es/da
 # 
 # http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
-_:genid4 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteAyuntamiento> .
-_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/org#Membership> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteAyuntamiento> .
-_:genid6 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid6 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/org#Membership> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
-_:genid9 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#gestionadoPor> .
-_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/org#Organization> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#gestionadoPor> .
-_:genid11 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid11 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/org#Organization> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad> .
-_:genid18 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad> .
-_:genid16 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid16 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
-_:genid19 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesAyuntamiento> .
-_:genid23 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/org#Organization> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesAyuntamiento> .
-_:genid21 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid21 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/org#Organization> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
-_:genid24 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid28 .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#suscritoPor> .
-_:genid28 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#suscritoPor> .
-_:genid26 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid26 <http://www.w3.org/2002/07/owl#onClass> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
-_:genid29 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid32 .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid33 .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio> .
-_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio> .
-_:genid31 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid31 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteAyuntamiento> .
+_:genid24 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/org#Membership> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteAyuntamiento> .
+_:genid22 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/org#Membership> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#gestionadoPor> .
+_:genid29 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/org#Organization> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#gestionadoPor> .
+_:genid27 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid27 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/org#Organization> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid34 .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#documento> .
-_:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://schema.org/DigitalDocument> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad> .
+_:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad> .
+_:genid32 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid32 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe> .
-_:genid35 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#instrumenta> .
-_:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/subvencion#Subvencion> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid35 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesAyuntamiento> .
+_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/org#Organization> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid37 .
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#materia> .
-_:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga> .
-_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesAyuntamiento> .
+_:genid37 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid37 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/org#Organization> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#suscritoPor> .
+_:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#suscritoPor> .
+_:genid42 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid42 <http://www.w3.org/2002/07/owl#onClass> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio> .
+_:genid49 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio> .
+_:genid47 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid47 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#documento> .
+_:genid50 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://schema.org/DigitalDocument> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#instrumenta> .
+_:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/subvencion#Subvencion> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#materia> .
+_:genid52 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#comment> "Acuerdos con efectos jurídicos adoptados por los ayuntamientos con entes públicos o privados."@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#comment> "Agreements with legal effects adopted by municipalities with public or private entities."@en .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#label> "Agreement"@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> <http://www.w3.org/2000/01/rdf-schema#label> "Convenio"@es .
 # 
 # http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
-_:genid39 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid42 .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid43 .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito> .
-_:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid41 .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito> .
-_:genid41 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid41 <http://www.w3.org/2002/07/owl#onClass> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
-_:genid44 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid47 .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid48 .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#entidadSuscriptora> .
-_:genid48 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/org#Organization> .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid46 .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#entidadSuscriptora> .
-_:genid46 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid46 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/org#Organization> .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
-_:genid49 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid52 .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid53 .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteEntidad> .
-_:genid53 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/org#Membership> .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid50 .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid51 .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteEntidad> .
-_:genid51 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid51 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/org#Membership> .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
-_:genid54 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid57 .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid58 .
-_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesEntidad> .
-_:genid58 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/org#Organization> .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid56 .
-_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesEntidad> .
-_:genid56 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid56 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/org#Organization> .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
+_:genid53 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito> .
+_:genid57 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito> .
+_:genid55 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid55 <http://www.w3.org/2002/07/owl#onClass> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
+_:genid58 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid62 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#entidadSuscriptora> .
+_:genid62 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/org#Organization> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#entidadSuscriptora> .
+_:genid60 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid60 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/org#Organization> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid63 .
+_:genid63 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid67 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteEntidad> .
+_:genid67 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/org#Membership> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid65 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteEntidad> .
+_:genid65 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid65 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/org#Membership> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid68 .
+_:genid68 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid72 .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid72 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesEntidad> .
+_:genid72 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/org#Organization> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid70 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#obligadoPrestacionesEntidad> .
+_:genid70 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid70 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/org#Organization> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa la relación que existe entre un convenio y las entidades que lo subscriben. Un convenio puede ser suscrito por varias entidades y una entidad puede subscribir varios convenios."@es .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the relationship that exists between an agreement and the entities that subscribe it. An agreement can be signed by several entities and an entity can subscribe several agreements."@en .
-<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios"@en .
+<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio"@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> <http://www.w3.org/2000/01/rdf-schema#label> "Subscription of an agreement by an entity"@en .
 <http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#SuscripcionDeConvenioPorEntidad> <http://www.w3.org/2000/01/rdf-schema#label> "Suscripción de un convenio por una entidad"@es .
 # 
@@ -917,6 +971,9 @@ _:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://xmlns.com/foaf/0.1/Agent
 <http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent (eg. person, group, software or physical artifact)." .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent" .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # 
 # 

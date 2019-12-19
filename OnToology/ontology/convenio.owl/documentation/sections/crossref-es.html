@@ -7,6 +7,9 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <a href="#http://www.w3.org/ns/org#Role" title="http://www.w3.org/ns/org#Role">actividad</a>
       </li>
       <li>
+         <a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent">Agent</a>
+      </li>
+      <li>
          <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
       </li>
       <li>
@@ -91,6 +94,28 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          </dd>
       </dl>
    </div>
+   <div class="entity" id="http://xmlns.com/foaf/0.1/Agent">
+      <h3>Agent<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://xmlns.com/foaf/0.1/Agent</p>
+      <div class="comment">
+         <span class="markdown">An agent (eg. person, group, software or physical artifact).</span>
+      </div>
+      <dl>
+         <dt>Estado</dt>
+         <dd>stable</dd>
+      </dl>
+      <dl class="description">
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/org#Organization" title="http://www.w3.org/ns/org#Organization">organización</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="http://www.w3.org/2004/02/skos/core#Concept">
       <h3>Concept<sup class="type-c" title="clase">c</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
@@ -115,12 +140,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          </dd>
          <dt>en rango de</dt>
          <dd>
-            <a href="#materia"
-               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#materia">materia</a>
-            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#modalidad"
-               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad">modalidad</a>
-            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#tipoConvenio"
-               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio">tipo de convenio</a>
+            <a href="#http://www.w3.org/ns/org#classification" title="http://www.w3.org/ns/org#classification">pertenece a la clasificación</a>
             <sup class="type-op" title="Propiedad entre objetos">op</sup>
          </dd>
          <dt>disjunto a</dt>
@@ -194,13 +214,15 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
             <a href="#documento"
                title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#documento">documento</a>
             <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#esProrrogaDe"
-               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe">es prorroga de</a>
+               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe">es prórroga de</a>
             <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#fechaFinalizacion"
                title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaFinalizacion">fecha de finalización</a>
             <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#fechaInicio"
                title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaInicio">fecha de inicio</a>
             <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#fechaRegistro"
                title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaRegistro">fecha de registro</a>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#fechaResolucionFinalizacion"
+               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaResolucionFinalizacion">fecha de resolución de finalización</a>
             <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#fechaSuscripcion"
                title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaSuscripcion">fecha de suscripción</a>
             <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#firmanteAyuntamiento"
@@ -234,7 +256,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
             <a href="#convenioSuscrito"
                title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito">convenio suscrito</a>
             <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#esProrrogaDe"
-               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe">es prorroga de</a>
+               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe">es prórroga de</a>
             <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#prorroga"
                title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga">prórroga</a>
             <sup class="type-op" title="Propiedad entre objetos">op</sup>
@@ -473,7 +495,7 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
       <dl class="description">
          <dt>tiene superclases</dt>
          <dd>
-            <span class="dotted" title="http://xmlns.com/foaf/0.1/Agent">agent</span>
+            <a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent">Agent</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
          <dt>en dominio de</dt>
@@ -588,9 +610,7 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
       </li>
       <li>
          <a href="#convenioSuscrito"
-            title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito">
-            <span>convenio suscrito</span>
-         </a>
+            title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito">convenio suscrito</a>
       </li>
       <li>
          <a href="#http://schema.org/dateCreated" title="http://schema.org/dateCreated">dateCreated</a>
@@ -611,9 +631,7 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
       </li>
       <li>
          <a href="#esProrrogaDe"
-            title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe">
-            <span>es prorroga de</span>
-         </a>
+            title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe">es prórroga de</a>
       </li>
       <li>
          <a href="#firmanteAyuntamiento"
@@ -714,6 +732,13 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
       </h3>
       <p>
          <strong>IRI:</strong> http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito</p>
+      <div class="comment">
+         <span class="markdown">Convenio suscrito por una entidad.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>http://vocab.ciudadesabiertas.es/def/sector-publico/convenio</dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>dominio</dt>
@@ -758,6 +783,13 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
             <dt>rango</dt>
             <dd>
                <span class="dotted" title="http://schema.org/Date">date</span>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dd>
+               <span class="dotted" title="http://schema.org/Date">date</span>
+               <sup class="type-c" title="clase">c</sup> 
+               <span class="logic">or</span> 
+               <span class="dotted" title="http://schema.org/DateTime">date time</span>
                <sup class="type-c" title="clase">c</sup>
             </dd>
          </dl>
@@ -890,12 +922,19 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
       </div>
    </div>
    <div class="entity" id="esProrrogaDe">
-      <h3>es prorroga de<sup class="type-op" title="Propiedad entre objetos">op</sup>
+      <h3>es prórroga de<sup class="type-op" title="Propiedad entre objetos">op</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe</p>
+      <div class="comment">
+         <span class="markdown">Convenio del cual es prórroga</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>http://vocab.ciudadesabiertas.es/def/sector-publico/convenio</dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>dominio</dt>
@@ -1066,6 +1105,10 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
       </dl>
       <div class="description">
          <dl>
+            <dt>tiene superpropiedades</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
             <dt>rango</dt>
             <dd>
                <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
@@ -1102,15 +1145,12 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
             <dt>rango</dt>
             <dd>
                <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-            <dd>
-               <a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">is in scheme</a>
+               <sup class="type-c" title="clase">c</sup> 
+               <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">is in scheme</a>
                <sup class="type-op" title="Propiedad entre objetos">op</sup> 
                <span class="logic">value</span> 
                <a href="#http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto"
-                  title="http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto">programa gasto</a>
-            </dd>
+                  title="http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto">programa gasto</a>)</dd>
          </dl>
       </div>
    </div>
@@ -1139,15 +1179,12 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
             <dt>rango</dt>
             <dd>
                <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-            <dd>
-               <a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">is in scheme</a>
+               <sup class="type-c" title="clase">c</sup> 
+               <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">is in scheme</a>
                <sup class="type-op" title="Propiedad entre objetos">op</sup> 
                <span class="logic">value</span> 
                <a href="#http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/modalidad"
-                  title="http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/modalidad">modalidad</a>
-            </dd>
+                  title="http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/modalidad">modalidad</a>)</dd>
          </dl>
       </div>
    </div>
@@ -1170,6 +1207,10 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
                <span class="dotted" title="http://schema.org/Thing">thing</span>
                <sup class="type-c" title="clase">c</sup>
             </dd>
+            <dd>
+               <span class="dotted" title="http://schema.org/Thing">thing</span>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -1183,6 +1224,10 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
       <div class="comment">
          <span class="markdown">Área de gobierno obligado a realizar las prestaciones convenidas.</span>
       </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>http://vocab.ciudadesabiertas.es/def/sector-publico/convenio</dd>
+      </dl>
       <div class="description">
          <p>
             <strong>tiene características:</strong> funcional</p>
@@ -1256,6 +1301,11 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
                <a href="#http://www.w3.org/ns/org#Organization" title="http://www.w3.org/ns/org#Organization">organización</a>
                <sup class="type-c" title="clase">c</sup>
             </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -1290,7 +1340,7 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
             <dt>inversa de</dt>
             <dd>
                <a href="#esProrrogaDe"
-                  title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe">es prorroga de</a>
+                  title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe">es prórroga de</a>
                <sup class="type-op" title="Propiedad entre objetos">op</sup>
             </dd>
          </dl>
@@ -1360,15 +1410,12 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
             <dt>rango</dt>
             <dd>
                <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-            <dd>
-               <a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">is in scheme</a>
+               <sup class="type-c" title="clase">c</sup> 
+               <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">is in scheme</a>
                <sup class="type-op" title="Propiedad entre objetos">op</sup> 
                <span class="logic">value</span> 
                <a href="#http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/tipo-convenio"
-                  title="http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/tipo-convenio">tipo convenio</a>
-            </dd>
+                  title="http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/tipo-convenio">tipo convenio</a>)</dd>
          </dl>
       </div>
    </div>
@@ -1390,6 +1437,11 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
       </dl>
       <div class="description">
          <dl>
+            <dt>dominio</dt>
+            <dd>
+               <span class="dotted" title="http://schema.org/Thing">thing</span>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
             <dt>rango</dt>
             <dd>
                <span class="dotted" title="http://schema.org/Thing">thing</span>
@@ -1465,6 +1517,9 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
          <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">
             <span>name</span>
          </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2004/02/skos/core#notation" title="http://www.w3.org/2004/02/skos/core#notation">notation</a>
       </li>
       <li>
          <a href="#numero"
@@ -1626,6 +1681,20 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
          <dt>Definida por</dt>
          <dd>http://vocab.ciudadesabiertas.es/def/sector-publico/convenio</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#Convenio"
+                  title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio">Convenio</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#date">date</span>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="fechaSuscripcion">
       <h3>fecha de suscripción<sup class="type-dp" title="Propiedad de datos">dp</sup>
@@ -1708,6 +1777,32 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
             <dt>rango</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#notation">
+      <h3>notation<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#notation</p>
+      <div class="comment">
+         <span class="markdown">A notation, also known as classification code, is a string of characters such as "T58.5" or "303.4833" used to uniquely identify a concept within the scope of a given concept scheme.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Definida por</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>tiene subpropiedades</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/org#identifier" title="http://www.w3.org/ns/org#identifier">tiene identificador</a>
+               <sup class="type-dp" title="Propiedad de datos">dp</sup>
             </dd>
          </dl>
       </div>
@@ -1864,7 +1959,7 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
          <dl>
             <dt>tiene superpropiedades</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#notation">notation</span>
+               <a href="#http://www.w3.org/2004/02/skos/core#notation" title="http://www.w3.org/2004/02/skos/core#notation">notation</a>
                <sup class="type-dp" title="Propiedad de datos">dp</sup>
             </dd>
             <dt>dominio</dt>
