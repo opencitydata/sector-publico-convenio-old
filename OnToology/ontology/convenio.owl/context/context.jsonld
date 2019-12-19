@@ -23,7 +23,8 @@
       "@type" : "@id"
     },
     "fechaResolucionFinalizacion" : {
-      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaResolucionFinalizacion"
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaResolucionFinalizacion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
     "range" : {
       "@id" : "https://www.w3.org/2000/01/rdf-schema#range"

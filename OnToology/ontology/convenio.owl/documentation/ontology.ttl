@@ -234,7 +234,12 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://schema.org/dateCreated
 <http://schema.org/dateCreated> rdf:type owl:ObjectProperty ;
-                                rdfs:range <http://schema.org/Date> ;
+                                rdfs:range <http://schema.org/Date> ,
+                                           [ rdf:type owl:Class ;
+                                             owl:unionOf ( <http://schema.org/Date>
+                                                           <http://schema.org/DateTime>
+                                                         )
+                                           ] ;
                                 rdfs:comment "The date on which the CreativeWork was created or the item was added to a DataFeed."@en ;
                                 rdfs:isDefinedBy <https://schema.org/dateCreated> ;
                                 rdfs:label "dateCreated"@en .
@@ -243,11 +248,19 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://schema.org/name
 <http://schema.org/name> rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf <rdfs:label> ;
-                         rdfs:domain <http://schema.org/Thing> .
+                         rdfs:domain <http://schema.org/Thing> ,
+                                     [ rdf:type owl:Class ;
+                                       owl:unionOf ( <http://schema.org/Thing>
+                                                   )
+                                     ] .
 
 
 ###  http://schema.org/url
 <http://schema.org/url> rdf:type owl:ObjectProperty ;
+                        rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( <http://schema.org/Thing>
+                                                  )
+                                    ] ;
                         rdfs:range <http://schema.org/Thing> ;
                         rdfs:comment "URL of the item."@en ;
                         rdfs:isDefinedBy <https://schema.org/url> ;
@@ -258,7 +271,12 @@ xsd:date rdf:type rdfs:Datatype .
 :convenioSuscrito rdf:type owl:ObjectProperty ;
                   owl:inverseOf :suscritoPor ;
                   rdfs:domain :SuscripcionDeConvenioPorEntidad ;
-                  rdfs:range :Convenio .
+                  rdfs:range :Convenio ;
+                  rdfs:comment "Agreement subscribed by an entity."@en ,
+                               "Convenio suscrito por una entidad."@es ;
+                  rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
+                  rdfs:label "convenio suscrito"@es ,
+                             "subscribed agreement"@en .
 
 
 ###  http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#documento
@@ -279,7 +297,7 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:range <http://www.w3.org/ns/org#Organization> ;
                     rdfs:comment "Organización que subscribe el convenio."@es ,
                                  "Organization that subscribes the agreement."@en ;
-                    rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+                    rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
                     rdfs:label "entidad suscriptora"@es ,
                                "subscribing entity"@en .
 
@@ -288,7 +306,12 @@ xsd:date rdf:type rdfs:Datatype .
 :esProrrogaDe rdf:type owl:ObjectProperty ;
               owl:inverseOf :prorroga ;
               rdfs:domain :Convenio ;
-              rdfs:range :Convenio .
+              rdfs:range :Convenio ;
+              rdfs:comment "Agreement of which is an extension"@en ,
+                           "Convenio del cual es prórroga"@es ;
+              rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
+              rdfs:label "es prórroga de"@es ,
+                         "is extension of"@en .
 
 
 ###  http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteAyuntamiento
@@ -297,7 +320,7 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:range <http://www.w3.org/ns/org#Membership> ;
                       rdfs:comment "Municipal government area and position of the city council signer."@en ,
                                    "Área de gobierno municipal y cargo del firmante por el ayuntamiento"@es ;
-                      rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+                      rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
                       rdfs:label "firmante ayuntamiento"@es ,
                                  "signer city council"@en .
 
@@ -308,7 +331,7 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:range <http://www.w3.org/ns/org#Membership> ;
                  rdfs:comment "Area of the organization and position of the signer of the agreement."@en ,
                               "Área de la organización y cargo del firmante del convenio."@es ;
-                 rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+                 rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
                  rdfs:label "firmante entidad"@es ,
                             "signer entity"@en .
 
@@ -320,7 +343,7 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:range <http://www.w3.org/ns/org#Organization> ;
                rdfs:comment "Area of municipal government or district responsible for managing the agreement."@en ,
                             "Área de gobierno municipal o distrito encargada de gestionar el convenio."@es ;
-               rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+               rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
                rdfs:label "gestiondado por"@es ,
                           "managed by"@en .
 
@@ -333,7 +356,7 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/subvencion#Subvencion> ;
              rdfs:comment "Se pueden celebrar convenios para el otorgamiento directo de subvenciones, o para la participación de entidades que colaborarán con la gestión de la subvención"@es ,
                           "Agreements can be held for the direct granting of subsidies, or for the participation of entities that will collaborate with the management of the subsidy." ;
-             rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+             rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
              rdfs:label "instrumenta"@es ,
                         "instruments"@en .
 
@@ -342,14 +365,17 @@ xsd:date rdf:type rdfs:Datatype .
 :materia rdf:type owl:ObjectProperty ,
                   owl:FunctionalProperty ;
          rdfs:domain :Convenio ;
-         rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ,
-                    [ rdf:type owl:Restriction ;
-                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                      owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto>
+         rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                             owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto>
+                                           ]
+                                         ) ;
+                      rdf:type owl:Class
                     ] ;
          rdfs:comment "Main subject of the agreement. Corresponds to a public policy of the city council."@en ,
                       "Materia principal de ámbito del convenio. Corresponde a una política pública del ayuntamiento."@es ;
-         rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+         rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
          rdfs:label "materia"@es ,
                     "subject"@en .
 
@@ -357,14 +383,17 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#modalidad
 :modalidad rdf:type owl:ObjectProperty ;
            rdfs:domain :Convenio ;
-           rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                        owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/modalidad>
+           rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                               owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/modalidad>
+                                             ]
+                                           ) ;
+                        rdf:type owl:Class
                       ] ;
            rdfs:comment "La modalidad determina el objeto, procedimientos, régimen jurídico y los recursos aportados por ambas partes."@es ,
                         "The modality determines the objective, procedures, legal regime and the resources contributed by both parties."@en ;
-           rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+           rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
            rdfs:label "modalidad"@es ,
                       "modality"@en .
 
@@ -376,6 +405,7 @@ xsd:date rdf:type rdfs:Datatype .
                                   rdfs:range <http://www.w3.org/ns/org#Organization> ;
                                   rdfs:comment "Government area that is obliged to provide the agreed capabilities."@en ,
                                                "Área de gobierno obligado a realizar las prestaciones convenidas."@es ;
+                                  rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
                                   rdfs:label "obligado prestaciones ayuntamiento"@es ,
                                              "obliged capabilities city council"@en .
 
@@ -387,7 +417,7 @@ xsd:date rdf:type rdfs:Datatype .
                              rdfs:range <http://www.w3.org/ns/org#Organization> ;
                              rdfs:comment "Organizational areas of the entities that are obliged to provide the agreed capabilities."@en ,
                                           "Áreas organizativas de las entidades que son los obligados a realizar las prestaciones convenidas."@es ;
-                             rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+                             rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
                              rdfs:label "obligado prestaciones entidad"@es ,
                                         "obliged capabilities entity"@en .
 
@@ -398,7 +428,7 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:range :Convenio ;
           rdfs:comment "Extension of an existing agreement."@en ,
                        "Prórroga a un convenio existente."@es ;
-          rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+          rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
           rdfs:label "extension"@en ,
                      "prórroga"@es .
 
@@ -409,7 +439,7 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:range :SuscripcionDeConvenioPorEntidad ;
              rdfs:comment "Entidad que suscribe el convenio."@es ,
                           "Entity that suscribes the agreement."@en ;
-             rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+             rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
              rdfs:label "subscribed by"@en ,
                         "suscrito por"@es .
 
@@ -418,14 +448,17 @@ xsd:date rdf:type rdfs:Datatype .
 :tipoConvenio rdf:type owl:ObjectProperty ,
                        owl:FunctionalProperty ;
               rdfs:domain :Convenio ;
-              rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                           owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/tipo-convenio>
+              rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                  owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/tipo-convenio>
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
                          ] ;
               rdfs:comment "Tipo de convenio según las entidades que las suscriben."@es ,
                            "Type of agreement according to the entities that sign them."@en ;
-              rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios"@en ;
+              rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio"@en ;
               rdfs:label "tipo de convenio"@es ,
                          "type of agreement"@en .
 
@@ -452,6 +485,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://www.w3.org/2004/02/skos/core#inScheme
 <http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf owl:topObjectProperty ;
                                                rdfs:range <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                                                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
                                                rdfs:label "is in scheme"@en ;
@@ -462,10 +496,13 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.w3.org/ns/org#classification
 <http://www.w3.org/ns/org#classification> rdf:type owl:ObjectProperty ;
                                           rdfs:domain <http://www.w3.org/ns/org#Organization> ;
+                                          rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
                                           rdfs:comment "Indica una classificazione per questa Organization all'interno di un qualche schema di classificazione. Alcuni vocabolari potrebbero voler specializzare questa proprietà per avere un codominio corrispondente a uno specifico `skos:ConceptScheme`. Si noti che la presenza di questa proprietà è ancora in fase di discussione e potrebbe  essere revisionata o rimossa."@it ,
                                                        "Indicates a classification for this Organization within some classification scheme. Extension vocabularies may wish to specialize this property to have a range corresponding to a specific `skos:ConceptScheme`. This property is under discussion and may be revised or removed - in many cases organizations are best categorized by defining a sub-class hierarchy in an extension vocabulary."@en ,
                                                        "Indique une classification pour cette Organisation dans le cadre d'un schéma de classification. Il est possible de spécialiser cette propriété en utilisant un vocabulaire spécialisé pour que le champ corresponde à un concept spécifique `skos:ConceptScheme`. Cette propriété est en discussion est pourrait être révisée ou supprimée - dans de nombreux cas, les organisations sont mieux catégorisées par une hiérarchie de sous-classe dans un vocabulaire externe."@fr ,
-                                                       "Ordenación jerárquica que se hace de una organización dentro de un esquema de clasificación. Es posible que algunos vocabularios especifiquen esta propiedad de forma que el rango se corresponda con un `skos:ConceptScheme` específico. La conveniencia de incluir esta propiedad se está debatiendo y puede que se revise o elimine (en muchos casos las organizaciones se clasifican mejor si se define una jerarquía de subclases en un vocabulario aparte)"@es ;
+                                                       "Ordenación jerárquica que se hace de una organización dentro de un esquema de clasificación. Es posible que algunos vocabularios especifiquen esta propiedad de forma que el rango se corresponda con un `skos:ConceptScheme` específico. La conveniencia de incluir esta propiedad se está debatiendo y puede que se revise o elimine (en muchos casos las organizaciones se clasifican mejor si se define una jerarquía de subclases en un vocabulario aparte)"@es ,
+                                                       """ある分類表内のこの組織に対する分類を示します。
+アプリケーションがorg:Organizationのサブクラスを組織的なカテゴリーを表わす手段として定義することも許容されることに注意してください。"""@ja ;
                                           rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
                                           rdfs:label "classification"@en ,
                                                      "classification"@fr ,
@@ -519,7 +556,7 @@ xsd:date rdf:type rdfs:Datatype .
                    rdfs:range xsd:date ;
                    rdfs:comment "End date of the agreement"@en ,
                                 "Fecha de finalización del convenio."@es ;
-                   rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+                   rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
                    rdfs:label "end date"@en ,
                               "fecha de finalización"@es .
 
@@ -531,7 +568,7 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:range xsd:date ;
              rdfs:comment "Date the agreement begins."@en ,
                           "Fecha de inicio del convenio."@es ;
-             rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+             rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
              rdfs:label "fecha de inicio"@es ,
                         "start date"@en .
 
@@ -550,9 +587,11 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaResolucionFinalizacion
 :fechaResolucionFinalizacion rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :Convenio ;
+                             rdfs:range xsd:date ;
                              rdfs:comment "Date of the resolution by which the agreement is finalized."@en ,
                                           "Fecha de la resolución por la cual se finaliza el convenio."@es ;
-                             rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios"@en ;
+                             rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio"@en ;
                              rdfs:label "end agreement resolution date"@en ,
                                         "fecha de resolución de finalización"@es .
 
@@ -564,7 +603,7 @@ xsd:date rdf:type rdfs:Datatype .
                   rdfs:range xsd:date ;
                   rdfs:comment "Date on which the agreement is signed."@en ,
                                "Fecha en que se suscribe (firma) el convenio."@es ;
-                  rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+                  rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
                   rdfs:label "fecha de suscripción"@es ,
                              "subscription date"@en .
 
@@ -576,7 +615,7 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:range xsd:string ;
         rdfs:comment "Agreement's identification number"@en ,
                      "Número que identifica al convenio."@es ;
-        rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+        rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
         rdfs:label "number"@en ,
                    "número"@es .
 
@@ -589,7 +628,7 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:range xsd:string ;
         rdfs:comment "Objective of the agreement"@en ,
                      "Objetivo del convenio"@es ;
-        rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+        rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
         rdfs:label "objective"@en ,
                    "objeto"@es .
 
@@ -602,7 +641,7 @@ xsd:date rdf:type rdfs:Datatype .
                                  rdfs:range xsd:float ;
                                  rdfs:comment "Amount of economic obligations by the City Council."@en ,
                                               "Cuantía de obligaciones económicas por el Ayuntamiento."@es ;
-                                 rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+                                 rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
                                  rdfs:label "economic obligation city council."@en ,
                                             "obligación económica ayuntamiento"@es .
 
@@ -614,7 +653,7 @@ xsd:date rdf:type rdfs:Datatype .
                             rdfs:range xsd:float ;
                             rdfs:comment "Amount of economic obligations by entities."@en ,
                                          "Cuantía de obligaciones económicas por parte de las entidades"@es ;
-                            rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+                            rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
                             rdfs:label "economic obligation entity"@en ,
                                        "obligación económica entidad"@es .
 
@@ -642,7 +681,11 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2004/02/skos/core#notation
-<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:DatatypeProperty .
+<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:DatatypeProperty ;
+                                               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                               rdfs:label "notation"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme."@en ;
+                                               <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:notation is used with a typed literal in the object position of the triple."@en .
 
 
 ###  http://www.w3.org/ns/org#identifier
@@ -797,24 +840,16 @@ xsd:date rdf:type rdfs:Datatype .
                             owl:allValuesFrom <http://schema.org/DigitalDocument>
                           ] ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty :esProrrogaDe ;
-                            owl:allValuesFrom :Convenio
-                          ] ,
-                          [ rdf:type owl:Restriction ;
                             owl:onProperty :instrumenta ;
                             owl:allValuesFrom <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/subvencion#Subvencion>
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :materia ;
                             owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :prorroga ;
-                            owl:allValuesFrom :Convenio
                           ] ;
           rdfs:comment "Acuerdos con efectos jurídicos adoptados por los ayuntamientos con entes públicos o privados."@es ,
                        "Agreements with legal effects adopted by municipalities with public or private entities."@en ;
-          rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios" ;
+          rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
           rdfs:label "Agreement"@en ,
                      "Convenio"@es .
 
@@ -871,7 +906,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                  ] ;
                                  rdfs:comment "Representa la relación que existe entre un convenio y las entidades que lo subscriben. Un convenio puede ser suscrito por varias entidades y una entidad puede subscribir varios convenios."@es ,
                                               "Represents the relationship that exists between an agreement and the entities that subscribe it. An agreement can be signed by several entities and an entity can subscribe several agreements."@en ;
-                                 rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenios"@en ;
+                                 rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio"@en ;
                                  rdfs:label "Subscription of an agreement by an entity"@en ,
                                             "Suscripción de un convenio por una entidad"@es .
 
@@ -962,7 +997,10 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
-<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class .
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
+                                  rdfs:comment "An agent (eg. person, group, software or physical artifact)." ;
+                                  rdfs:label "Agent" ;
+                                  <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 
 
 #################################################################
