@@ -1,5 +1,93 @@
 <html>
-<h2 id="desc" class="list">Vocabulary for the representation of data on agreements, that is to say agreements with legal effects adopted by municipalities with other public administrations, public bodies, public law entities, other municipalities, public universities, or with private entities for a common purpose.: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
-<span class="markdown">Descripci&oacute;n completa de la ontolog&iacute;a: en caso de ser posible, a&ntilde;adir un diagrama explicando c&oacute;omo las clases est&aacute;n relacionadas, ejemplos de uso, etc.</span>
+<h2 id="desc" class="list">Vocabulario para la representación de datos sobre convenios adoptados por los ayuntamientos con otras entidades: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<span class="markdown">La Figura 1 muestra las clases y propiedades del vocabulario que representa los convenios adoptados por los ayuntamientos con otras entidades:</span>
+<center><img src="resources/images/modeloConceptual.png"><figcaption>Figura 1. - Vocabulario para la representación de los datos sobre convenios adoptados por los ayuntamientos con otras entidades</figcaption>
+</center>
+<span class="markdown">
+El concepto principal de este vocabulario es el de [esconv:Convenio](#Convenio). Un convenio puede ser suscrito por una o más entidades a través de la clase [esconv:SuscripcionDeConvenioPorEntidad](#SuscripcionDeConvenioPorEntidad). El convenio es gestionado por algún área de gobierno [org:Organization](#Organization) o un [esadm:Distrito](#Distrito).  Nuevamente un área de gobierno representado mediante la clase org:Organization tiene la responsabilidad de las prestaciones convenidas [esconv:obligadoPrestacionesAyuntamiento](#obligadoPrestacionesAyuntamiento), similarmente sucede con el área dentro de una entidad suscriptora o la entidad en sí misma que realiza las prestaciones convenidas [esconv:obligadoPrestacionesEntidad](#obligadoPrestacionesEntidad). Un convenio puede instrumentar una [essubv:Subvencion](#Subvencion). Un Convenio puede tener asociado varios documentos digitales tales como el texto del convenio o los informes de asesoría jurídica  [schema:DigitalDocument](#DigitalDocument). Adicionalmente un convenio puede tener una o más prórrogas [esconv:prorroga](#prorroga).
+Los cargos de las personas firmantes de un convenio tanto por parte del ayuntamiento [esconv:firmanteAyuntamiento](#firmanteAyuntamiento) como de las entidades suscriptoras [esconv:firmanteEntidad](#firmanteEntidad) se representan a través de las clases [org:Role](https://www.w3.org/TR/vocab-org/#org:Role) , [org:Organization](https://www.w3.org/TR/vocab-org/#class-organization) y [org:Membership](https://www.w3.org/TR/vocab-org/#class-membership).
 
+Adicionalmente, en este vocabulario se han utilizado varios esquemas de conceptos SKOS para representar la modalidad y el tipo de convenio. También se tiene que las organizaciones se clasifican con un esquema SKOS a través de la propiedad [org:classification](#org:classification). La [esconv:materia](#materia) de un convenio se maneja a través de la clasificación por programa de gastos de presupuestos de los ayuntamientos, esta clasificación es la establecida en la Orden EHA/3565/2008, de 3 de diciembre, por la que se aprueba la estructura de los presupuestos de las entidades locales.
+En la Figura 1 se pueden observar varias relaciones con la clase de conceptos SKOS, sin embargo, los valores concretos no se han especificado pues son diferentes según la taxonomía que representen. Por ejemplo, la propiedad [esconv:tipoConvenio](#tipoConvenio) puede tener los valores Interadministrativo, Intraadministrativo, Sujeto de derecho privado y Sujeto de derecho internacional.
+  </span>
+  <h3>3.1 Ejemplos de uso<span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h3>
+<span class="markdown">
+  Con la finalidad de facilitar la comprensión del uso de algunas clases y propiedades de este vocabulario se proporcionarán a continuación algunos ejemplos.
+
+  En primer lugar para la representación de un convenio se crea una instancia de la clase [esconv:Convenio](#Convenio) con las propiedades número, fecha de suscripción y fecha de incorporación. También se tiene la organización que gestiona un convenio, sus fechas de inicio y finalización, el objeto del convenio y la obligación económica contraida por el ayuntamiento. La modalidad del convenio es una subvención nominativa, la cual a su vez es una instancia de [skos:Concept](#Concept). Similarmente, el tipo de convenio es Sujeto de derecho internacional y la materia es la de actuación de protección y promoción social.
+
+  Como el convenio es una subvención nominativa instrumentada por el convenio, se crea una instancia de la clase [essubv:Subvencion](#Subvencion) la cual tiene las propiedades  fecha de adjudicación, importe y  adjudicatario.
+</span>
+<pre>
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/convenio/0d10671ff974c8e0e84c1c2b8cef5283&gt; a esconv:Convenio ;
+  	esconv:numero "2018-00572-041-00048" ;
+  	esconv:fechaSuscripcion "2018-12-17"^^xsd:date ;
+  	esconv:fechaIncorporacion "2019-01-15"^^xsd:date .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/convenio/0d10671ff974c8e0e84c1c2b8cef5283&gt;
+  	esconv:fechaInicio "2018-12-17"^^xsd:date ;
+  	esconv:objeto "Convenio de subvención nominativa entre el Ayuntamiento deMadrid y el Programa de las Naciones Unidas para los ...."@es ;
+  	esconv:fechaFinalizacion "2019-12-16"^^xsd:date ;
+  	esconv:obligacionEconomicaAyuntamiento "2500000"^^xsd:double .
+
+  &lt;http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenio/modalidad-convenio/subvencion-nominativa&gt; a skos:Concept .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/
+  convenio/0d10671ff974c8e0e84c1c2b8cef5283&gt;
+  esconv:modalidad &lt;http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenio/modalidad-convenio/subvencion-nominativa&gt; .
+
+  &lt;http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenio/
+  tipo-convenio/sujeto-de-derecho-internacional&gt; a skos:Concept .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/
+  convenio/0d10671ff974c8e0e84c1c2b8cef5283&gt; esconv:tipoConvenio &lt;http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenio/
+  tipo-convenio/sujeto-de-derecho-internacional&gt; .
+
+  &lt;http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto/actuacion-de-proteccion-y-promocion-social> a skos:Concept .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/convenio/0d10671ff974c8e0e84c1c2b8cef5283&gt; esconv:materia &lt;http://vocab.linkeddata.es/datosabiertos/kos/hacienda/
+  presupuesto/programa-gasto/actuacion-de-proteccion-y-promocion-social&gt; .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/convenio/0d10671ff974c8e0e84c1c2b8cef5283&gt; esconv:instrumenta &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/
+  convenio/subvencion/0d10671ff974c8e0e84c1c2b8cef5283&gt; .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/subvencion/0d10671ff974c8e0e84c1c2b8cef5283&gt; a essubv:Subvencion ;
+  	essubv:fechaAdjudicacion "2018-12-17"^^xsd:date ;
+  	essubv:importe "25000000"^^xsd:double ;
+  	essubv:adjudicatario &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/
+    adjudicatario/f852fd5d6b166a7b9b037deab59d7059&gt; .
+</pre>
+<span class="markdown">
+  En el siguiente ejemplo se muestra un convenio que ha sido suscrito por una entidad, para ello se crea una instancia de la clase [esconv:SucripcionDeConvenioPorEntidad](#SucripcionDeConvenioPorEntidad). Esta instancia luego se relaciona con la entidad suscriptora, el firmante de la entidad y la instancia del convenio propiamente dicha. La entidad que ha suscrito el convenio corresponde a "COMISIONES OBRERAS DE ARAGON".
+
+  Por otra parte el firmante por el ayuntamiento se relaciona con una instancia de la clase [org:Membership](#Membership), el área de gobierno que firma el convenio es la propia Alcaldía de Zaragoza y el firmante es el Alcalde/sa.
+</span>
+  <pre>
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/suscripcion-por-entidad/be6a8fbf395c0f80be5bf1e67a626da5&gt;
+    esconv:firmanteEntidad &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/cargo-organizacion/b9fcc7ced0ed74bf5e6c32f958bfb7ee&gt; ;
+	esconv:entidadSuscriptora &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/organizacion/b9fcc7ced0ed74bf5e6c32f958bfb7ee&gt; ;
+	esconv:convenioSuscrito &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/convenio/1f5069142727648138a54524b5beeb58&gt; .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/convenio/1f5069142727648138a54524b5beeb58&gt; a esconv:Convenio ;
+	esconv:numero "5170" ;
+	esconv:fechaSuscripcion "2019-01-01"^^xsd:date ;
+	esconv:fechaIncorporacion "2019-01-01"^^xsd:date .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/organizacion/b9fcc7ced0ed74bf5e6c32f958bfb7ee&gt; a org:Organization ;
+	org:identifier "X00000080" ;
+	foaf:name "COMISIONES OBRERAS DE ARAGON"@es ;
+	org:classification &lt;http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenio/tipo-entidad/asociacion-privada-sin-animo-de-lucro&gt; .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/convenio/1f5069142727648138a54524b5beeb58&gt;
+	esconv:firmanteAyuntamiento &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/cargo-organizacion/e1b3deb4d9d73164a8ecf66b2a245fe4&gt; .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/cargo-organizacion/e1b3deb4d9d73164a8ecf66b2a245fe4&gt; a org:Membership ;
+	org:role &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/cargo/ee432b4cf440b95f7d375de290e21e25&gt; ;
+	org:organization &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/organizacion/8b99c951ce4fa901276e79dbcde7972a&gt; .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/
+  organizacion/8b99c951ce4fa901276e79dbcde7972a&gt; a org:Organization ;
+	org:identifier "X00000102" ;
+	foaf:name "Alcaldía de Zaragoza"@es .
+  </pre>
 </html>
