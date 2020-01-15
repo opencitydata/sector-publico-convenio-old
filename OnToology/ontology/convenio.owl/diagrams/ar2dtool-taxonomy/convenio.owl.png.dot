@@ -1,20 +1,20 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "convenio:Convenio" "-20f0e5cf:16f1e61a153:-7fd0" "-20f0e5cf:16f1e61a153:-7fc3" "-20f0e5cf:16f1e61a153:-7fe9" "dbo:GovernmentalAdministrativeRegion" "-20f0e5cf:16f1e61a153:-7fc8" "http://xmlns.com/foaf/0.1/Agent" "http://schema.org/CreativeWork" "-20f0e5cf:16f1e61a153:-7fd5" "-20f0e5cf:16f1e61a153:-7fb9" "dbo:District" "-20f0e5cf:16f1e61a153:-7fbe" "convenio:SuscripcionDeConvenioPorEntidad" "http://schema.org/DigitalDocument" "http://schema.org/Thing" "esadm:Distrito" "dbo:Municipality" "-20f0e5cf:16f1e61a153:-7fdf" "-20f0e5cf:16f1e61a153:-7fe4" "skos:Concept" "esadm:Municipio" "org:Organization" "org:Role" "-20f0e5cf:16f1e61a153:-7fda" ; /*classes style*/
-	"convenio:Convenio" -> "-20f0e5cf:16f1e61a153:-7fdf" [ label = "rdfs:subClassOf" ];
-	"convenio:Convenio" -> "-20f0e5cf:16f1e61a153:-7fd5" [ label = "rdfs:subClassOf" ];
-	"convenio:Convenio" -> "-20f0e5cf:16f1e61a153:-7fda" [ label = "rdfs:subClassOf" ];
-	"convenio:Convenio" -> "-20f0e5cf:16f1e61a153:-7fd0" [ label = "rdfs:subClassOf" ];
-	"convenio:Convenio" -> "-20f0e5cf:16f1e61a153:-7fe4" [ label = "rdfs:subClassOf" ];
-	"convenio:Convenio" -> "-20f0e5cf:16f1e61a153:-7fe9" [ label = "rdfs:subClassOf" ];
+node [shape = rectangle, color="black"]; "convenio:Convenio" "-687d9dd1:16fa8c723ae:-7fbb" "-687d9dd1:16fa8c723ae:-7fd2" "http://xmlns.com/foaf/0.1/Agent" "dbo:GovernmentalAdministrativeRegion" "-687d9dd1:16fa8c723ae:-7fcd" "-687d9dd1:16fa8c723ae:-7fe1" "http://schema.org/CreativeWork" "-687d9dd1:16fa8c723ae:-7fb6" "dbo:District" "-687d9dd1:16fa8c723ae:-7fe6" "-687d9dd1:16fa8c723ae:-7fc0" "-687d9dd1:16fa8c723ae:-7fdc" "convenio:SuscripcionDeConvenioPorEntidad" "http://schema.org/DigitalDocument" "http://schema.org/Thing" "esadm:Distrito" "dbo:Municipality" "skos:Concept" "esadm:Municipio" "org:Role" "org:Organization" "-687d9dd1:16fa8c723ae:-7fc5" "-687d9dd1:16fa8c723ae:-7fd7" ; /*classes style*/
+	"convenio:Convenio" -> "-687d9dd1:16fa8c723ae:-7fdc" [ label = "rdfs:subClassOf" ];
+	"convenio:Convenio" -> "-687d9dd1:16fa8c723ae:-7fe1" [ label = "rdfs:subClassOf" ];
+	"convenio:Convenio" -> "-687d9dd1:16fa8c723ae:-7fd7" [ label = "rdfs:subClassOf" ];
+	"convenio:Convenio" -> "-687d9dd1:16fa8c723ae:-7fcd" [ label = "rdfs:subClassOf" ];
+	"convenio:Convenio" -> "-687d9dd1:16fa8c723ae:-7fd2" [ label = "rdfs:subClassOf" ];
+	"convenio:Convenio" -> "-687d9dd1:16fa8c723ae:-7fe6" [ label = "rdfs:subClassOf" ];
 	"org:Organization" -> "http://xmlns.com/foaf/0.1/Agent" [ label = "rdfs:subClassOf" ];
 	"http://schema.org/CreativeWork" -> "http://schema.org/Thing" [ label = "rdfs:subClassOf" ];
 	"org:Role" -> "skos:Concept" [ label = "rdfs:subClassOf" ];
-	"convenio:SuscripcionDeConvenioPorEntidad" -> "-20f0e5cf:16f1e61a153:-7fbe" [ label = "rdfs:subClassOf" ];
-	"convenio:SuscripcionDeConvenioPorEntidad" -> "-20f0e5cf:16f1e61a153:-7fc8" [ label = "rdfs:subClassOf" ];
-	"convenio:SuscripcionDeConvenioPorEntidad" -> "-20f0e5cf:16f1e61a153:-7fc3" [ label = "rdfs:subClassOf" ];
-	"convenio:SuscripcionDeConvenioPorEntidad" -> "-20f0e5cf:16f1e61a153:-7fb9" [ label = "rdfs:subClassOf" ];
+	"convenio:SuscripcionDeConvenioPorEntidad" -> "-687d9dd1:16fa8c723ae:-7fc0" [ label = "rdfs:subClassOf" ];
+	"convenio:SuscripcionDeConvenioPorEntidad" -> "-687d9dd1:16fa8c723ae:-7fbb" [ label = "rdfs:subClassOf" ];
+	"convenio:SuscripcionDeConvenioPorEntidad" -> "-687d9dd1:16fa8c723ae:-7fb6" [ label = "rdfs:subClassOf" ];
+	"convenio:SuscripcionDeConvenioPorEntidad" -> "-687d9dd1:16fa8c723ae:-7fc5" [ label = "rdfs:subClassOf" ];
 	"esadm:Distrito" -> "dbo:District" [ label = "rdfs:subClassOf" ];
 	"dbo:Municipality" -> "dbo:GovernmentalAdministrativeRegion" [ label = "rdfs:subClassOf" ];
 	"dbo:District" -> "dbo:GovernmentalAdministrativeRegion" [ label = "rdfs:subClassOf" ];

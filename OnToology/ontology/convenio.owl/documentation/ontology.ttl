@@ -340,7 +340,11 @@ xsd:date rdf:type rdfs:Datatype .
 :gestionadoPor rdf:type owl:ObjectProperty ,
                         owl:FunctionalProperty ;
                rdfs:domain :Convenio ;
-               rdfs:range <http://www.w3.org/ns/org#Organization> ;
+               rdfs:range [ rdf:type owl:Class ;
+                            owl:unionOf ( <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito>
+                                          <http://www.w3.org/ns/org#Organization>
+                                        )
+                          ] ;
                rdfs:comment "Area of municipal government or district responsible for managing the agreement."@en ,
                             "Área de gobierno municipal o distrito encargada de gestionar el convenio."@es ;
                rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
