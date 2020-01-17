@@ -234,8 +234,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://schema.org/dateCreated
 <http://schema.org/dateCreated> rdf:type owl:ObjectProperty ;
-                                rdfs:range <http://schema.org/Date> ,
-                                           [ rdf:type owl:Class ;
+                                rdfs:range [ rdf:type owl:Class ;
                                              owl:unionOf ( <http://schema.org/Date>
                                                            <http://schema.org/DateTime>
                                                          )
@@ -248,11 +247,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://schema.org/name
 <http://schema.org/name> rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf <rdfs:label> ;
-                         rdfs:domain <http://schema.org/Thing> ,
-                                     [ rdf:type owl:Class ;
-                                       owl:unionOf ( <http://schema.org/Thing>
-                                                   )
-                                     ] .
+                         rdfs:domain <http://schema.org/Thing> .
 
 
 ###  http://schema.org/url
