@@ -1,6 +1,101 @@
 <html>
-<h2 id="desc" class="list">Vocabulary for the representation of data on agreements, that is to say agreements with legal effects adopted by municipalities with other public administrations, public bodies, public law entities, other municipalities, public universities, or with private entities for a common purpose.: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="desc" class="list">Vocabulary for the representation of data on agreements adopted by municipalities with other entities for a common purpose: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+Figure 1 shows the classes and properties of the vocabulary that represents data on agreements adopted by municipalities with other entities for a common purpose:</span>
+<center><img src="resources/images/modeloConceptual.png"><figcaption>Figure 1. - Vocabulary for the representation of data on agreements adopted by municipalities with other entities for a common purpose</figcaption>
+</center>
+<span class="markdown">
+The general concept of this vocabulary is the Agreement [esconv:Convenio](#Convenio). An agreement can be subscribed by one or more entities through the class [esconv:SuscripcionDeConvenioPorEntidad](#SuscripcionDeConvenioPorEntidad). An agreement is managed by a government area [org:Organization](#Organization) or by a [esadm:district](#Distrito). Again, a government area represented by the class org:Organization offers certain capabilities in the context of the agreement [esconv:obligadoPrestacionesAyuntamiento](#obligadoPrestacionesAyuntamiento). Similarly, an area within a subscribing entity or the entity itself offers also certain capabilities for the agreement.
+ [esconv:obligadoPrestacionesEntidad](#obligadoPrestacionesEntidad).
+ An agreement may implement a [essubv:Subvencion](#Subvención). An agreement may have several digital documents associated such as the text of the agreement or the legal department report [schema:DigitalDocument](#DigitalDocument). Additionally, an agreement can have one or more extensions [esconv:prorroga](#prorroga).
+
+ The position of each signee of an agreement that belongs to the city council [esconv:firmanteAyuntamiento](#firmanteAyuntamiento) as well as to the subscribing entity [esconv:firmanteEntidad](#firmanteEntidad)  is represented through the classes [org:Role](https://www.w3.org/TR/vocab-org/#org:Role) , [org:Organization](https://www.w3.org/TR/vocab-org/#class-organization) and [org:Membership](https://www.w3.org/TR/vocab-org/#class-membership).
+
+
+Additionally in this vocabulary we have used SKOS concept schemas to represent the modality [esconv:modalidad](#modalidad) and the type of agreement [esconv:tipoConvenio](#tipoConvenio). Also, organizations are classified with a SKOS schema through the property [org:classification](#org:classification). The subject [esconv:materia](#materia) of an agreement can be handled through the classification by expense program for  city council budgets; this classification is established in the Order EHA/3565/2008, December 3, that establishes the local entity's budget structure.
+
+In Figure 1 we show several relationships to the class of SKOS concepts. Each skos:Concept class corresponds to a specific taxonomy and we indicate its name between << >>. For example, the property type of agreement  [esconv:tipoConvenio](#tipoConvenio) relates to a skos:Concept that represents the values for the taxonomy esconvkos:tipo-convenio which are Interadministrativo, Intraadministrativo, Sujeto de derecho privado and Sujeto de derecho internacional.
+
+  </span>
+  <h3>3.1 Examples<span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h3>
+<span class="markdown">
+  With the goal of understanding the use of some classes of properties in this vocabulary,  we provide some examples:
+
+  First, to represent an agreement we create an instance of the class [esconv:Convenio](#Convenio) with properties number, subscription date and incorporation date. We also have the city council area (organization) that is in charge of the agreement, its start and end dates, the goal of the agreement and the economic obligation of the city council. The agreement's modality is  nominative subvention, which in turn is an instance of a [skos:Concept](#Concept). Similarly, the type of agreement is Subject of international law, and the topic of the agreement is protection and social promotion action.
+
+  As the agreement is a subvention, an instance of  the class [essubv:Subvención](#Subvencion)  is created which has the properties award date, amount, and awardee.
+</span>
+<pre>
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/convenio/0d10671ff974c8e0e84c1c2b8cef5283&gt; a esconv:Convenio ;
+  	esconv:numero "2018-00572-041-00048" ;
+  	esconv:fechaSuscripcion "2018-12-17"^^xsd:date ;
+  	esconv:fechaIncorporacion "2019-01-15"^^xsd:date .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/convenio/0d10671ff974c8e0e84c1c2b8cef5283&gt;
+  	esconv:fechaInicio "2018-12-17"^^xsd:date ;
+  	esconv:objeto "Convenio de subvención nominativa entre el Ayuntamiento deMadrid y el Programa de las Naciones Unidas para los ...."@es ;
+  	esconv:fechaFinalizacion "2019-12-16"^^xsd:date ;
+  	esconv:obligacionEconomicaAyuntamiento "2500000"^^xsd:double .
+
+  &lt;http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenio/modalidad-convenio/subvencion-nominativa&gt; a skos:Concept .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/
+  convenio/0d10671ff974c8e0e84c1c2b8cef5283&gt;
+  esconv:modalidad &lt;http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenio/modalidad-convenio/subvencion-nominativa&gt; .
+
+  &lt;http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenio/
+  tipo-convenio/sujeto-de-derecho-internacional&gt; a skos:Concept .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/
+  convenio/0d10671ff974c8e0e84c1c2b8cef5283&gt; esconv:tipoConvenio &lt;http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenio/
+  tipo-convenio/sujeto-de-derecho-internacional&gt; .
+
+  &lt;http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto/actuacion-de-proteccion-y-promocion-social> a skos:Concept .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/convenio/0d10671ff974c8e0e84c1c2b8cef5283&gt; esconv:materia &lt;http://vocab.linkeddata.es/datosabiertos/kos/hacienda/
+  presupuesto/programa-gasto/actuacion-de-proteccion-y-promocion-social&gt; .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/convenio/0d10671ff974c8e0e84c1c2b8cef5283&gt; esconv:instrumenta &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/
+  convenio/subvencion/0d10671ff974c8e0e84c1c2b8cef5283&gt; .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/subvencion/0d10671ff974c8e0e84c1c2b8cef5283&gt; a essubv:Subvencion ;
+  	essubv:fechaAdjudicacion "2018-12-17"^^xsd:date ;
+  	essubv:importe "25000000"^^xsd:double ;
+  	essubv:adjudicatario &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/
+    adjudicatario/f852fd5d6b166a7b9b037deab59d7059&gt; .
+</pre>
+<span class="markdown">
+In the following example we show an agreement that has beem subscribed by an entity, we create an instance of the class [esconv:SucripcionDeConvenioPorEntidad](#SucripcionDeConvenioPorEntidad). This instance is related to the subscribing entity, the entity's signee, and the agreement instance itself. The entity that has subscribed the agreement is "COMISIONES OBRERAS DE ARAGON".
+
+Also, the city council's signee is related to an instance of the class [org:Membership](#Membership). The government area that signs the agreement is the Zaragoza city council itself, and the signee is the mayor of the city.
+</span>
+  <pre>
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/suscripcion-por-entidad/be6a8fbf395c0f80be5bf1e67a626da5&gt;
+    esconv:firmanteEntidad &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/cargo-organizacion/b9fcc7ced0ed74bf5e6c32f958bfb7ee&gt; ;
+	esconv:entidadSuscriptora &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/organizacion/b9fcc7ced0ed74bf5e6c32f958bfb7ee&gt; ;
+	esconv:convenioSuscrito &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/convenio/1f5069142727648138a54524b5beeb58&gt; .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/convenio/1f5069142727648138a54524b5beeb58&gt; a esconv:Convenio ;
+	esconv:numero "5170" ;
+	esconv:fechaSuscripcion "2019-01-01"^^xsd:date ;
+	esconv:fechaIncorporacion "2019-01-01"^^xsd:date .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/organizacion/b9fcc7ced0ed74bf5e6c32f958bfb7ee&gt; a org:Organization ;
+	org:identifier "X00000080" ;
+	foaf:name "COMISIONES OBRERAS DE ARAGON"@es ;
+	org:classification &lt;http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenio/tipo-entidad/asociacion-privada-sin-animo-de-lucro&gt; .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/convenio/1f5069142727648138a54524b5beeb58&gt;
+	esconv:firmanteAyuntamiento &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/cargo-organizacion/e1b3deb4d9d73164a8ecf66b2a245fe4&gt; .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/cargo-organizacion/e1b3deb4d9d73164a8ecf66b2a245fe4&gt; a org:Membership ;
+	org:role &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/cargo/ee432b4cf440b95f7d375de290e21e25&gt; ;
+	org:organization &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/organizacion/8b99c951ce4fa901276e79dbcde7972a&gt; .
+
+  &lt;http://vocab.ciudadesabiertas.es/recurso/sector-publico/convenio/
+  organizacion/8b99c951ce4fa901276e79dbcde7972a&gt; a org:Organization ;
+	org:identifier "X00000102" ;
+	foaf:name "Alcaldía de Zaragoza"@es .
+  </pre>
 
 </html>
