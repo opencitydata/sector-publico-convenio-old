@@ -92,6 +92,10 @@
     "hasVersion" : {
       "@id" : "http://purl.org/dc/terms/hasVersion"
     },
+    "identificador" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#identificador",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "Subvencion" : {
       "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/subvencion#Subvencion"
     },
@@ -273,10 +277,6 @@
     "importe" : {
       "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/subvencion#importe",
       "@type" : "http://www.w3.org/2001/XMLSchema#float"
-    },
-    "numero" : {
-      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#numero",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "alternative" : {
       "@id" : "http://purl.org/dc/terms/alternative"
