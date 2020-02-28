@@ -234,8 +234,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://schema.org/dateCreated
 <http://schema.org/dateCreated> rdf:type owl:ObjectProperty ;
-                                rdfs:range <http://schema.org/Date> ,
-                                           [ rdf:type owl:Class ;
+                                rdfs:range [ rdf:type owl:Class ;
                                              owl:unionOf ( <http://schema.org/Date>
                                                            <http://schema.org/DateTime>
                                                          )
@@ -248,11 +247,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://schema.org/name
 <http://schema.org/name> rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf <rdfs:label> ;
-                         rdfs:domain <http://schema.org/Thing> ,
-                                     [ rdf:type owl:Class ;
-                                       owl:unionOf ( <http://schema.org/Thing>
-                                                   )
-                                     ] .
+                         rdfs:domain <http://schema.org/Thing> .
 
 
 ###  http://schema.org/url
@@ -612,16 +607,16 @@ xsd:date rdf:type rdfs:Datatype .
                              "subscription date"@en .
 
 
-###  http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#numero
-:numero rdf:type owl:DatatypeProperty ,
-                 owl:FunctionalProperty ;
-        rdfs:domain :Convenio ;
-        rdfs:range xsd:string ;
-        rdfs:comment "Agreement's identification number"@en ,
-                     "Número que identifica al convenio."@es ;
-        rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
-        rdfs:label "number"@en ,
-                   "número"@es .
+###  http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#identificador
+:identificador rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :Convenio ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Agreement's identification character string"@en ,
+                            "String de caracteres que identifica al convenio."@es ;
+               rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
+               rdfs:label "identificador"@es ,
+                          "identifier"@en .
 
 
 ###  http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#objeto
