@@ -870,17 +870,17 @@ En esta versión se han definido clases y propiedades de acuerdo a los requisito
     
 
 
-    <!-- http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#numero -->
+    <!-- http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#identificador -->
 
-    <owl:DatatypeProperty rdf:about="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#numero">
+    <owl:DatatypeProperty rdf:about="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#identificador">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Agreement&apos;s identification number</rdfs:comment>
-        <rdfs:comment xml:lang="es">Número que identifica al convenio.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Agreement&apos;s identification character string</rdfs:comment>
+        <rdfs:comment xml:lang="es">String de caracteres que identifica al convenio.</rdfs:comment>
         <rdfs:isDefinedBy>http://vocab.ciudadesabiertas.es/def/sector-publico/convenio</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">number</rdfs:label>
-        <rdfs:label xml:lang="es">número</rdfs:label>
+        <rdfs:label xml:lang="es">identificador</rdfs:label>
+        <rdfs:label xml:lang="en">identifier</rdfs:label>
     </owl:DatatypeProperty>
     
 
