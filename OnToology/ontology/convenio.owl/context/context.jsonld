@@ -4,10 +4,6 @@
       "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaFinalizacion",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
-    "prorroga" : {
-      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga",
-      "@type" : "@id"
-    },
     "abstract" : {
       "@id" : "http://purl.org/dc/terms/abstract"
     },
@@ -37,10 +33,6 @@
     },
     "Convenio" : {
       "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio"
-    },
-    "esProrrogaDe" : {
-      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe",
-      "@type" : "@id"
     },
     "example" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#example"
@@ -112,6 +104,10 @@
     },
     "qualifiedCardinality" : {
       "@id" : "http://www.w3.org/2002/07/owl#qualifiedCardinality"
+    },
+    "variacion" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#variacion",
+      "@type" : "@id"
     },
     "Municipio" : {
       "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio"
@@ -269,6 +265,14 @@
     },
     "contributor" : {
       "@id" : "http://purl.org/dc/elements/1.1/contributor"
+    },
+    "esVariacionDe" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esVariacionDe",
+      "@type" : "@id"
+    },
+    "tipoVariacion" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoVariacion",
+      "@type" : "@id"
     },
     "materia" : {
       "@id" : "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#materia",
