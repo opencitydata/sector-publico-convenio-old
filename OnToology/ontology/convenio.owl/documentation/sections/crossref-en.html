@@ -108,14 +108,12 @@ This section provides details for each class and property defined by Vocabulary 
                title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaResolucionFinalizacion">end agreement resolution date</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#fechaFinalizacion"
                title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaFinalizacion">end date</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#prorroga"
-               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga">extension</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#identificador"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#identificador"
                title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#identificador">identifier</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#instrumenta"
                title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#instrumenta">instruments</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#esProrrogaDe"
-               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe">is extension of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#esVariacionDe"
+               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esVariacionDe">is variation of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#gestionadoPor"
                title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#gestionadoPor">managed by</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#modalidad"
@@ -136,18 +134,22 @@ This section provides details for each class and property defined by Vocabulary 
                title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#suscritoPor">subscribed by</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#fechaSuscripcion"
                title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#fechaSuscripcion">subscription date</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#tipoConvenio"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#tipoVariacion"
+               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoVariacion">tipo variacion</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#tipoConvenio"
                title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio">type of agreement</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#variacion"
+               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#variacion">variation</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#prorroga"
-               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga">extension</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#esProrrogaDe"
-               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe">is extension of</a>
+            <a href="#esVariacionDe"
+               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esVariacionDe">is variation of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#convenioSuscrito"
                title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#convenioSuscrito">subscribed agreement</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#variacion"
+               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#variacion">variation</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -219,6 +221,8 @@ This section provides details for each class and property defined by Vocabulary 
                title="http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/tipo-convenio">tipo convenio</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/tipo-entidad"
                title="http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/tipo-entidad">tipo entidad</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#tipo-variacion"
+               title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipo-variacion">tipo variacion</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
          <dt>is disjoint with</dt>
@@ -617,19 +621,15 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
             title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#documento">document</a>
       </li>
       <li>
-         <a href="#prorroga"
-            title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga">extension</a>
-      </li>
-      <li>
          <a href="#instrumenta"
             title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#instrumenta">instruments</a>
       </li>
       <li>
-         <a href="#esProrrogaDe"
-            title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe">is extension of</a>
+         <a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">is in scheme</a>
       </li>
       <li>
-         <a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">is in scheme</a>
+         <a href="#esVariacionDe"
+            title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esVariacionDe">is variation of</a>
       </li>
       <li>
          <a href="#gestionadoPor"
@@ -683,11 +683,21 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
             title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#entidadSuscriptora">subscribing entity</a>
       </li>
       <li>
+         <a href="#tipoVariacion"
+            title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoVariacion">
+            <span>tipo variacion</span>
+         </a>
+      </li>
+      <li>
          <a href="#tipoConvenio"
             title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoConvenio">type of agreement</a>
       </li>
       <li>
          <a href="#http://schema.org/url" title="http://schema.org/url">url</a>
+      </li>
+      <li>
+         <a href="#variacion"
+            title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#variacion">variation</a>
       </li>
       <li>
          <a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/organizacion#ambitoCompetencias"
@@ -813,43 +823,6 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
          </dl>
       </div>
    </div>
-   <div class="entity" id="prorroga">
-      <h3>extension<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga</p>
-      <div class="comment">
-         <span class="markdown">Extension of an existing agreement.</span>
-      </div>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>http://vocab.ciudadesabiertas.es/def/sector-publico/convenio</dd>
-      </dl>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Convenio"
-                  title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio">Agreement</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Convenio"
-                  title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio">Agreement</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#esProrrogaDe"
-                  title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe">is extension of</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="instrumenta">
       <h3>instruments<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -887,43 +860,6 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
          </dl>
       </div>
    </div>
-   <div class="entity" id="esProrrogaDe">
-      <h3>is extension of<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe</p>
-      <div class="comment">
-         <span class="markdown">Agreement of which is an extension</span>
-      </div>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>http://vocab.ciudadesabiertas.es/def/sector-publico/convenio</dd>
-      </dl>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Convenio"
-                  title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio">Agreement</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Convenio"
-                  title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio">Agreement</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#prorroga"
-                  title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga">extension</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="http://www.w3.org/2004/02/skos/core#inScheme">
       <h3>is in scheme<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -951,6 +887,43 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
                <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
                   title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="esVariacionDe">
+      <h3>is variation of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esVariacionDe</p>
+      <div class="comment">
+         <span class="markdown">Agreement of which is an extension, addendum or modification.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://vocab.ciudadesabiertas.es/def/sector-publico/convenio</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Convenio"
+                  title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio">Agreement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Convenio"
+                  title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio">Agreement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#variacion"
+                  title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#variacion">variation</a>
+               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
@@ -1377,6 +1350,35 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
          </dl>
       </div>
    </div>
+   <div class="entity" id="tipoVariacion">
+      <h3>tipo variacion<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoVariacion</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Convenio"
+                  title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio">Agreement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">is in scheme</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">value</span> 
+               <a href="#tipo-variacion"
+                  title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipo-variacion">tipo variacion</a>)</dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="tipoConvenio">
       <h3>type of agreement<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1440,6 +1442,43 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
             <dd>
                <span class="dotted" title="http://schema.org/Thing">thing</span>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="variacion">
+      <h3>variation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#variacion</p>
+      <div class="comment">
+         <span class="markdown">Extension, addendum or modification of an existing agreement.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://vocab.ciudadesabiertas.es/def/sector-publico/convenio</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Convenio"
+                  title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio">Agreement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Convenio"
+                  title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio">Agreement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#esVariacionDe"
+                  title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esVariacionDe">is variation of</a>
+               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
@@ -1991,6 +2030,12 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
             <span>tipo entidad</span>
          </a>
       </li>
+      <li>
+         <a href="#tipo-variacion"
+            title="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipo-variacion">
+            <span>tipo variacion</span>
+         </a>
+      </li>
    </ul>
    <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/modalidad">
       <h3>modalidad<sup class="type-ni" title="named individual">ni</sup>
@@ -2047,6 +2092,22 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
       </h3>
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/convenios/tipo-entidad</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="tipo-variacion">
+      <h3>tipo variacion<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipo-variacion</p>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>

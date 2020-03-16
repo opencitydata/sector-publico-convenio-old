@@ -297,16 +297,16 @@ xsd:date rdf:type rdfs:Datatype .
                                "subscribing entity"@en .
 
 
-###  http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe
-:esProrrogaDe rdf:type owl:ObjectProperty ;
-              owl:inverseOf :prorroga ;
-              rdfs:domain :Convenio ;
-              rdfs:range :Convenio ;
-              rdfs:comment "Agreement of which is an extension"@en ,
-                           "Convenio del cual es prórroga"@es ;
-              rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
-              rdfs:label "es prórroga de"@es ,
-                         "is extension of"@en .
+###  http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esVariacionDe
+:esVariacionDe rdf:type owl:ObjectProperty ;
+               owl:inverseOf :variacion ;
+               rdfs:domain :Convenio ;
+               rdfs:range :Convenio ;
+               rdfs:comment "Agreement of which is an extension, addendum or modification."@en ,
+                            "Convenio del cual es prórroga, adenda o modificación."@es ;
+               rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
+               rdfs:label "es variación de"@es ,
+                          "is variation of"@en .
 
 
 ###  http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#firmanteAyuntamiento
@@ -421,17 +421,6 @@ xsd:date rdf:type rdfs:Datatype .
                                         "obliged capabilities entity"@en .
 
 
-###  http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga
-:prorroga rdf:type owl:ObjectProperty ;
-          rdfs:domain :Convenio ;
-          rdfs:range :Convenio ;
-          rdfs:comment "Extension of an existing agreement."@en ,
-                       "Prórroga a un convenio existente."@es ;
-          rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
-          rdfs:label "extension"@en ,
-                     "prórroga"@es .
-
-
 ###  http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#suscritoPor
 :suscritoPor rdf:type owl:ObjectProperty ;
              rdfs:domain :Convenio ;
@@ -460,6 +449,31 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio"@en ;
               rdfs:label "tipo de convenio"@es ,
                          "type of agreement"@en .
+
+
+###  http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoVariacion
+:tipoVariacion rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :Convenio ;
+               rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                   owl:hasValue :tipo-variacion
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] .
+
+
+###  http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#variacion
+:variacion rdf:type owl:ObjectProperty ;
+           rdfs:domain :Convenio ;
+           rdfs:range :Convenio ;
+           rdfs:comment "Extension, addendum or modification of an existing agreement."@en ,
+                        "Prórroga, adenda o extensión a un convenio existente."@es ;
+           rdfs:isDefinedBy "http://vocab.ciudadesabiertas.es/def/sector-publico/convenio" ;
+           rdfs:label "variación"@es ,
+                      "variation"@en .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/sector-publico/organizacion#ambitoCompetencias
@@ -1005,6 +1019,11 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipo-variacion
+:tipo-variacion rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
 
 ###  http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto
 <http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto> rdf:type owl:NamedIndividual ,
