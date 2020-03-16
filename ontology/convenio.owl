@@ -470,17 +470,17 @@ En esta versión se han definido clases y propiedades de acuerdo a los requisito
     
 
 
-    <!-- http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe -->
+    <!-- http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esVariacionDe -->
 
-    <owl:ObjectProperty rdf:about="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esProrrogaDe">
-        <owl:inverseOf rdf:resource="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga"/>
+    <owl:ObjectProperty rdf:about="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#esVariacionDe">
+        <owl:inverseOf rdf:resource="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#variacion"/>
         <rdfs:domain rdf:resource="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio"/>
         <rdfs:range rdf:resource="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio"/>
-        <rdfs:comment xml:lang="en">Agreement of which is an extension</rdfs:comment>
-        <rdfs:comment xml:lang="es">Convenio del cual es prórroga</rdfs:comment>
+        <rdfs:comment xml:lang="en">Agreement of which is an extension, addendum or modification.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Convenio del cual es prórroga, adenda o modificación.</rdfs:comment>
         <rdfs:isDefinedBy>http://vocab.ciudadesabiertas.es/def/sector-publico/convenio</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="es">es prórroga de</rdfs:label>
-        <rdfs:label xml:lang="en">is extension of</rdfs:label>
+        <rdfs:label xml:lang="es">es variación de</rdfs:label>
+        <rdfs:label xml:lang="en">is variation of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -630,20 +630,6 @@ En esta versión se han definido clases y propiedades de acuerdo a los requisito
     
 
 
-    <!-- http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga -->
-
-    <owl:ObjectProperty rdf:about="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#prorroga">
-        <rdfs:domain rdf:resource="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio"/>
-        <rdfs:range rdf:resource="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio"/>
-        <rdfs:comment xml:lang="en">Extension of an existing agreement.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Prórroga a un convenio existente.</rdfs:comment>
-        <rdfs:isDefinedBy>http://vocab.ciudadesabiertas.es/def/sector-publico/convenio</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">extension</rdfs:label>
-        <rdfs:label xml:lang="es">prórroga</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#suscritoPor -->
 
     <owl:ObjectProperty rdf:about="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#suscritoPor">
@@ -679,6 +665,40 @@ En esta versión se han definido clases y propiedades de acuerdo a los requisito
         <rdfs:isDefinedBy xml:lang="en">http://vocab.ciudadesabiertas.es/def/sector-publico/convenio</rdfs:isDefinedBy>
         <rdfs:label xml:lang="es">tipo de convenio</rdfs:label>
         <rdfs:label xml:lang="en">type of agreement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoVariacion -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipoVariacion">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipo-variacion"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#variacion -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#variacion">
+        <rdfs:domain rdf:resource="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio"/>
+        <rdfs:range rdf:resource="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#Convenio"/>
+        <rdfs:comment xml:lang="en">Extension, addendum or modification of an existing agreement.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Prórroga, adenda o extensión a un convenio existente.</rdfs:comment>
+        <rdfs:isDefinedBy>http://vocab.ciudadesabiertas.es/def/sector-publico/convenio</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="es">variación</rdfs:label>
+        <rdfs:label xml:lang="en">variation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1397,6 +1417,14 @@ Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipo-variacion -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#tipo-variacion">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </owl:NamedIndividual>
     
 
 
