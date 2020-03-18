@@ -161,12 +161,9 @@ WHERE {
 }
 
 ```
-En esta [consulta](http://ciudadesabiertas.linkeddata.es/sparql?default-graph-uri=&query=%23+Madrid+%0D%0A%23+Fecha+fin+posterior+a+1%2F10%2F2019+%28Activos+al+1%2F10%2F2019%29%0D%0A%23+Area+de+gobierno+de+Salud%2C+Seguridad+y+Emergencias%0D%0APREFIX+esconv%3A%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fsector-publico%2Fconvenio%23%3E%0D%0APREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E%0D%0APREFIX+foaf%3A%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+orges%3A%3Chttp%3A%2F%2Fvocab.linkeddata.es%2Fdatosabiertos%2Fdef%2Fsector-publico%2Forganizacion%23%3E%0D%0APREFIX+esconv%3A%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fsector-publico%2Fconvenio%23%3E%0D%0APREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E%0D%0APREFIX+foaf%3A%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+skos%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0A%0D%0ASELECT++%3Fnumero+%3Fobjeto+%3FfechaInicio+%3FfechaFin++%3FnombreEntidad+%3Fcosto+%0D%0AWHERE+%7B%0D%0A+++++++%3Fconvenio+a+esconv%3AConvenio+.%0D%0A+++++++OPTIONAL+%7B%3Fconvenio++esconv%3AfechaFinalizacion+%3FfechaFin%7D+.%0D%0A+++++++%3Fconvenio+esconv%3Anumero+%3Fnumero+.%0D%0A+++++++OPTIONAL+%7B%3Fconvenio+esconv%3Aobjeto+%3Fobjeto+%7D.%0D%0A+++++++OPTIONAL+%7B+%3Fconvenio+esconv%3AfechaInicio+%3FfechaInicio%7D+.%0D%0A+++++++%3Fconvenio+esconv%3AobligacionEconomicaAyuntamiento+%3Fcosto+.%0D%0A+++++++%3Fconvenio+esconv%3AgestionadoPor+%3Forganizacion1+.%0D%0A+++++++%3Forganizacion1+foaf%3Aname+%3FareaGobierno+.%0D%0A+++++++%3Forganizacion1+orges%3AambitoCompetencias+%0D%0A++++++++++++%3Chttps%3A%2F%2Fdatos.ign.es%2Frecurso%2Fbtn100%2Fmunicipio%2F28079%3E+.+%0D%0A+++++++%3FconvenioEntidad+esconv%3AconvenioSuscrito++%3Fconvenio.%0D%0A+++++++%3FconvenioEntidad+esconv%3AentidadSuscriptora+%3Forganizacion2+.%0D%0A+++++++%3Forganizacion2+foaf%3Aname+%3FnombreEntidad%0D%0A+++++++FILTER%28%3FfechaFin+%3E%3D+%222019-10-01%22+%26%26+%3FareaGobierno+%3D+%22%C3%81rea+de+Gobierno+de+Salud%2C+Seguridad+y+Emergencias%22%40es+%29%0D%0A+++++++%7D%0D%0A%0D%0A&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+) se obtienen los convenios activos gestionados por el área de gobierno de Salud, Seguridad y Emergencia con coste económico y cuánto dinero se destina en total para estos convenios.
+En esta [consulta](http://ciudadesabiertas.linkeddata.es/sparql?default-graph-uri=&query=%23+Madrid+%0D%0A%23+Fecha+fin+posterior+a+1%2F10%2F2019+%28Activos+al+1%2F10%2F2019%29%0D%0A%23+Area+de+gobierno+de+Salud%2C+Seguridad+y+Emergencias%0D%0APREFIX+esconv%3A%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fsector-publico%2Fconvenio%23%3E%0D%0APREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E%0D%0APREFIX+foaf%3A%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+orges%3A%3Chttp%3A%2F%2Fvocab.linkeddata.es%2Fdatosabiertos%2Fdef%2Fsector-publico%2Forganizacion%23%3E%0D%0APREFIX+esconv%3A%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fsector-publico%2Fconvenio%23%3E%0D%0APREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E%0D%0APREFIX+foaf%3A%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+skos%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0A%0D%0ASELECT++%3Fnumero+%3Fobjeto+%3FfechaInicio+%3FfechaFin++%3FnombreEntidad+%3Fcosto+%0D%0AWHERE+%7B%0D%0A+++++++%3Fconvenio+a+esconv%3AConvenio+.%0D%0A+++++++OPTIONAL+%7B%3Fconvenio++esconv%3AfechaFinalizacion+%3FfechaFin%7D+.%0D%0A+++++++%3Fconvenio+esconv%3Anumero+%3Fnumero+.%0D%0A+++++++OPTIONAL+%7B%3Fconvenio+esconv%3Aobjeto+%3Fobjeto+%7D.%0D%0A+++++++OPTIONAL+%7B+%3Fconvenio+esconv%3AfechaInicio+%3FfechaInicio%7D+.%0D%0A+++++++%3Fconvenio+esconv%3AobligacionEconomicaAyuntamiento+%3Fcosto+.%0D%0A+++++++%3Fconvenio+esconv%3AgestionadoPor+%3Forganizacion1+.%0D%0A+++++++%3Forganizacion1+foaf%3Aname+%3FareaGobierno+.%0D%0A+++++++%3Forganizacion1+orges%3AambitoCompetencias+%0D%0A++++++++++++%3Chttps%3A%2F%2Fdatos.ign.es%2Frecurso%2Fbtn100%2Fmunicipio%2F28079%3E+.+%0D%0A+++++++%3FconvenioEntidad+esconv%3AconvenioSuscrito++%3Fconvenio.%0D%0A+++++++%3FconvenioEntidad+esconv%3AentidadSuscriptora+%3Forganizacion2+.%0D%0A+++++++%3Forganizacion2+foaf%3Aname+%3FnombreEntidad%0D%0A+++++++FILTER%28%3FfechaFin+%3E%3D+%222019-10-01%22+%26%26+%3FareaGobierno+%3D+%22%C3%81rea+de+Gobierno+de+Salud%2C+Seguridad+y+Emergencias%22%40es+%29%0D%0A+++++++%7D%0D%0A%0D%0A&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+) se obtienen los convenios activos gestionados en Madrid por el área de gobierno de Salud, Seguridad y Emergencia con coste económico y cuánto dinero se destina para cada uno de estos convenios.
 
 ```
-# Madrid 
-# Fecha fin posterior a 1/10/2019 (Activos al 1/10/2019)
-# Area de gobierno de Salud, Seguridad y Emergencias
 PREFIX esconv:<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#>
 PREFIX schema:<http://schema.org/>
 PREFIX foaf:<http://xmlns.com/foaf/0.1/>
@@ -193,6 +190,38 @@ WHERE {
        ?organizacion2 foaf:name ?nombreEntidad
        FILTER(?fechaFin >= "2019-10-01" && ?areaGobierno = "Área de Gobierno de Salud, Seguridad y Emergencias"@es )
        }
+
+
+
+```
+En esta [consulta](http://ciudadesabiertas.linkeddata.es/sparql?default-graph-uri=&query=PREFIX+esconv%3A%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fsector-publico%2Fconvenio%23%3E%0D%0APREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E%0D%0APREFIX+foaf%3A%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+orges%3A%3Chttp%3A%2F%2Fvocab.linkeddata.es%2Fdatosabiertos%2Fdef%2Fsector-publico%2Forganizacion%23%3E%0D%0APREFIX+esconv%3A%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fsector-publico%2Fconvenio%23%3E%0D%0APREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E%0D%0APREFIX+foaf%3A%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+skos%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0A%0D%0ASELECT++%3Fanio+count%28%3Fnumero%29+as+%3FnumeroConvenios+sum%28%3Fcosto%29+as+%3FcosteTotal+%0D%0AWHERE+%7B%0D%0A+++++++%3Fconvenio+a+esconv%3AConvenio+.%0D%0A+++++++%3Fconvenio+esconv%3Anumero+%3Fnumero+.%0D%0A+++++++%3Fconvenio+esconv%3AfechaInicio+%3FfechaInicio+.%0D%0A+++++++%3Fconvenio+esconv%3AobligacionEconomicaAyuntamiento+%3Fcosto+.%0D%0A+++++++%3Fconvenio+esconv%3AgestionadoPor+%3Forganizacion1+.%0D%0A+++++++++%3Forganizacion1+foaf%3Aname+%3FareaGobierno+.%0D%0A+++++++++%3Forganizacion1+orges%3AambitoCompetencias+%0D%0A++++++++++++%3Chttps%3A%2F%2Fdatos.ign.es%2Frecurso%2Fbtn100%2Fmunicipio%2F28079%3E+.+%0D%0A+++++++BIND+%28year%28%3FfechaInicio%29+AS+%3Fanio%29%0D%0A+++++++FILTER+%28%3FfechaInicio+%3E%3D+%222018-01-01%22%5E%5E%0D%0A+++++++xsd%3Adate+%26%26+%3FfechaInicio+%3C%3D+%222019-12-31%22%5E%5Exsd%3Adate%29%0D%0A+++++++%7D%0D%0AGROUP+BY+%3Fanio%0D%0A&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+) se obtiene el número de convenios en Madrid y la cuantía en los años 2018 y 2019.
+
+```
+PREFIX esconv:<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#>
+PREFIX schema:<http://schema.org/>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX orges:<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/organizacion#>
+PREFIX esconv:<http://vocab.ciudadesabiertas.es/def/sector-publico/convenio#>
+PREFIX schema:<http://schema.org/>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+
+SELECT  ?anio count(?numero) as ?numeroConvenios sum(?costo) as ?costeTotal 
+WHERE {
+       ?convenio a esconv:Convenio .
+       ?convenio esconv:numero ?numero .
+       ?convenio esconv:fechaInicio ?fechaInicio .
+       ?convenio esconv:obligacionEconomicaAyuntamiento ?costo .
+       ?convenio esconv:gestionadoPor ?organizacion1 .
+         ?organizacion1 foaf:name ?areaGobierno .
+         ?organizacion1 orges:ambitoCompetencias 
+            <https://datos.ign.es/recurso/btn100/municipio/28079> . 
+       BIND (year(?fechaInicio) AS ?anio)
+       FILTER (?fechaInicio >= "2018-01-01"^^
+       xsd:date && ?fechaInicio <= "2019-12-31"^^xsd:date)
+       }
+GROUP BY ?anio
+
 
 
 
