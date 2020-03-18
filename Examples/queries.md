@@ -1,4 +1,4 @@
-## Ejemplos de consultas sobre agenda municipal
+## Ejemplos de consultas sobre convenios
 
 A continuación se presentan algunos ejemplos de consultas utilizando como referencia un extracto de los  conjuntos de datos de convenios publicados por el ayuntamiento de Madrid y el ayuntamiento de Zaragoza como datos abiertos. Además se han tomado algunos ejemplos  adicionales del portal Web del ayuntamiento de A Coruña.
 
