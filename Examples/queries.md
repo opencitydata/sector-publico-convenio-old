@@ -258,9 +258,6 @@ WHERE {
 }
 
 
-
-
-
 ```
 En esta [consulta](http://ciudadesabiertas.linkeddata.es/sparql?default-graph-uri=&query=PREFIX+esconv%3A%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fsector-publico%2Fconvenio%23%3E%0D%0APREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E%0D%0APREFIX+foaf%3A%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+orges%3A%3Chttp%3A%2F%2Fvocab.linkeddata.es%2Fdatosabiertos%2Fdef%2Fsector-publico%2Forganizacion%23%3E%0D%0APREFIX+esconv%3A%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fsector-publico%2Fconvenio%23%3E%0D%0APREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E%0D%0APREFIX+foaf%3A%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+skos%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0APREFIX+org%3A%3Chttp%3A%2F%2Fwww.w3.org%2Fns%2Forg%23%3E%0D%0A%0D%0A%0D%0ASELECT++DISTINCT+%3Fnumero+%3Fobjeto+%3FfechaSuscripcion+%3FfechaFin+%3FareaGobierno++%3Fcosto%0D%0AWHERE+%7B%0D%0A+++++++%3Fconvenio+a+esconv%3AConvenio+.%0D%0A+++++++%3Fconvenio+esconv%3Anumero+%3Fnumero+.%0D%0A+++++++OPTIONAL+%7B%3Fconvenio+esconv%3Aobjeto+%3Fobjeto+%7D+.%0D%0A+++++++OPTIONAL+%7B%3Fconvenio+esconv%3AfechaSuscripcion+%3FfechaSuscripcion%7D+.%0D%0A+++++++OPTIONAL+%7B%3Fconvenio+esconv%3AfechaFinalizacion+%3FfechaFin%7D+.%0D%0A+++++++OPTIONAL+%7B%3Fconvenio+esconv%3AobligacionEconomicaAyuntamiento+%3Fcosto%7D+.%0D%0A+++++++%3FconvenioEntidad+esconv%3AconvenioSuscrito++%3Fconvenio.%0D%0A+++++++%3FconvenioEntidad+esconv%3AentidadSuscriptora+%3Forganizacion2+.%0D%0A+++++++%3Forganizacion2+foaf%3Aname+%22UNI%C3%93N+GENERAL+DE+TRABAJADORES+DE+ARAG%C3%93N%22%40es+.++++++++++++++++++++%0D%0A++++++++%3Fconvenio+esconv%3AgestionadoPor+%3Forganizacion1+.%0D%0A++++++++%3Forganizacion1+foaf%3Aname+%3FareaGobierno+.%0D%0A++++++++%3Forganizacion1+orges%3AambitoCompetencias+%3Chttps%3A%2F%2Fdatos.ign.es%2Frecurso%2Fbtn100%2Fmunicipio%2F50297%3E+++%0D%0A+++++++++++++++++%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+) se obtienen los convenios suscritos por el ayuntamiento de Zaragoza con la Unión General de trabajadores de Aragón.
 
@@ -292,10 +289,6 @@ WHERE {
         ?organizacion1 orges:ambitoCompetencias <https://datos.ign.es/recurso/btn100/municipio/50297>   
                  
 }
-
-
-
-
 
 ```
 
