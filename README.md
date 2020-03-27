@@ -13,5 +13,5 @@ privado para un fin común. Por lo tanto, el alcance del vocabulario se centra e
 El material generado en las diferentes actividades ejecutadas durante el desarrollo del vocabulario, casos de uso, historias de usuario, glosario de términos, etc., se encuentra disponible en la [Wiki del Vocabulario](https://github.com/opencitydata/sector-publico-convenio/wiki).
 
 ## Mantenimiento
-Para gestionar aquellas incidencias o mejoras sugeridas con respecto al vocabulario te recomendamos seguir las guías proporcionadas en [Gestión de Issues](https://github.com/CiudadesAbiertas/sector-publico-convenio/wiki/Gesti%C3%B3n-de-issues)
+Para gestionar aquellas incidencias o mejoras sugeridas con respecto al vocabulario te recomendamos seguir las guías proporcionadas en [Gestión de Issues](https://github.com/opencitydata/sector-publico-convenio/wiki/Gesti%C3%B3n-de-issues)
 
